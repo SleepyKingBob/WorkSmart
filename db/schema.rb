@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_08_28_140617) do
+ActiveRecord::Schema[7.0].define(version: 2023_08_28_145852) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -19,12 +19,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_28_140617) do
     t.date "start_date"
     t.date "dead_line"
     t.integer "hours_worked"
-    t.boolean "active"
     t.integer "expected_hours"
-    t.boolean "completed"
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "completed", default: false
+    t.boolean "active", default: false
     t.index ["user_id"], name: "index_projects_on_user_id"
   end
 
@@ -40,10 +40,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_28_140617) do
 
   create_table "tasks", force: :cascade do |t|
     t.string "name"
-    t.boolean "completed"
     t.bigint "project_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "completed", default: false
     t.index ["project_id"], name: "index_tasks_on_project_id"
   end
 
