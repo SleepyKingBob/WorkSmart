@@ -1,24 +1,53 @@
-<div class="form-box">
-  <p class="text-1 center-text">Create account</p>
 
-  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-    <%= f.error_notification %>
-    <div>
-      <%= f.input :email,
-                  required: true,
-                  autofocus: true,
-                  input_html: { autocomplete: "email" }%>
-      <%= f.input :password,
-                  required: true,
-                  hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                  input_html: { autocomplete: "new-password" } %>
-      <%= f.input :password_confirmation,
-                  required: true,
-                  input_html: { autocomplete: "new-password" } %>
-    </div>
-    <div class="">
-      <%= f.button :submit, "Sign up" %>
-    </div>
-  <% end %>
-  <%= render "devise/shared/links" %>
-<div>
+<div data-controller="create-user">
+
+  <div class="form-box" data-create-user-target="first">
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <p class="text-1 center-text">Create account</p>
+
+      <div>
+
+        <%= f.email_field :email,
+                    required: true,
+                    autofocus: true,
+                    input_html: { autocomplete: "email" }%>
+        <%= f.password_field :password,
+                    required: true,
+                    hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                    input_html: { autocomplete: "new-password" } %>
+        <%= f.password_field :password_confirmation,
+                    required: true,
+                    input_html: { autocomplete: "new-password" } %>
+      </div>
+      <div class="">
+          <i class="" data-action="click->create-user#displayForm">Next step</i>
+      </div>
+  </div>
+
+  <%# next form %>
+
+
+  <div class="form-box invisible" data-create-user-target="second" >
+      <p class="text-1 center-text">Create account</p>
+
+      <div>
+        <%= f.text_field :first_name,
+                    required: true,
+                    autofocus: true,
+                    input_html: { autocomplete: "email" }%>
+        <%= f.text_field :last_name,
+                    required: true,
+                    input_html: { autocomplete: "new-password" } %>
+        <%= f.number_field :work_hours,
+                    required: true,
+                    input_html: { autocomplete: "new-password" } %>
+      </div>
+
+      <%= f.submit  "Sign up" %>
+
+    <% end %>
+    <%= render "devise/shared/links" %>
+  </div>
+
+
+</div>

@@ -1,3 +1,4 @@
+<% if current_user.id == nil %>
 <div class="landing-page">
         <header>
           <div class="container">
@@ -11,8 +12,21 @@
               <li><%= link_to "Features", root_path, class:"navbar-text1"  %></li>
               <li><%= link_to "Log in", user_session_path, class:"navbar-text1"  %></li>
               <li><%= link_to "Register Now ", new_user_registration_path, class:"button-1"  %></li>
+              <li><%= link_to "Log-out", destroy_user_session_path, data: {turbo_method: :delete}, class:"button-1"  %></li>
             </ul>
           </div>
         </header>
-
+<% else %>
+  <div class="landing-page">
+    <header>
+      <div class="d-flex justify-content-between w-100 px-4">
+        <i class="fa-solid fa-bars my-auto" data-action="click->sidebar#toggle"></i>
+        <a href="" class="navbar-text2 my-auto">Work <b>Smart</b></a>
+        <label class="switch my-auto">
+          <input type="checkbox">
+          <span class="slider round"></span>
+        </label>
       </div>
+    </header>
+  </div>
+<% end %>
