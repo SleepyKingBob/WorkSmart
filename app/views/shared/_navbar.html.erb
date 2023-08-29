@@ -1,15 +1,28 @@
-<div class="landing-page">
-        <header>
-          <div class="container">
-            <a href="" class="logo">Work <b>Smart</b></a>
-            <ul class="links">
-              <li>Home</li>
-              <li>About Us</li>
-              <li>Features</li>
-              <li>Pricing</li>
-              <li>Register Now </li>
-            </ul>
-          </div>
-        </header>
-
+<% if current_user.id == nil %>
+  <div class="landing-page">
+    <header>
+      <div class="container">
+        <a href="" class="logo">Work <b>Smart</b></a>
+          <ul class="links">
+            <li>Home</li>
+            <li>About Us</li>
+            <li>Features</li>
+            <li>Pricing</li>
+            <li>Register Now </li>
+          </ul>
       </div>
+    </header>
+  </div>
+<% else %>
+  <div class="landing-page">
+    <header>
+      <div class="d-flex justify-content-between w-100 px-4">
+        <i class="fa-solid fa-bars my-auto" data-action="click->sidebar#toggle"></i>
+        <a href="" class="logo my-auto">Work <b>Smart</b></a>
+          <ul class="links">
+            <li>Register Now </li>
+          </ul>
+      </div>
+    </header>
+  </div>
+<% end %>
