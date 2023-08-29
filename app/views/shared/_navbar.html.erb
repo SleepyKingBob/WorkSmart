@@ -1,21 +1,22 @@
-<% if current_user.id == nil %>
-<div class="landing-page">
-        <header>
-          <div class="container">
-            <div class="">
-              <%= image_tag "Logo.png" %>
-              <a href="" class="navbar-text2">Work <b>Smart</b></a>
-            </div>
-            <ul class="links">
-              <li><%= link_to "Home", root_path, class:"navbar-text1"  %></li>
-              <li><%= link_to "About us", root_path, class:"navbar-text1"  %></li>
-              <li><%= link_to "Features", root_path, class:"navbar-text1"  %></li>
-              <li><%= link_to "Log in", user_session_path, class:"navbar-text1"  %></li>
-              <li><%= link_to "Register Now ", new_user_registration_path, class:"button-1"  %></li>
-              <li><%= link_to "Log-out", destroy_user_session_path, data: {turbo_method: :delete}, class:"button-1"  %></li>
-            </ul>
-          </div>
-        </header>
+<% if current_user == nil %>
+  <div class="landing-page">
+    <header>
+      <div class="container">
+        <div class="">
+          <%= image_tag "Logo.png" %>
+          <a href="" class="navbar-text2">Work <b>Smart</b></a>
+        </div>
+        <ul class="links">
+          <li><%= link_to "Home", root_path, class:"navbar-text1"  %></li>
+          <li><%= link_to "About us", root_path, class:"navbar-text1"  %></li>
+          <li><%= link_to "Features", root_path, class:"navbar-text1"  %></li>
+          <li><%= link_to "Log in", user_session_path, class:"navbar-text1"  %></li>
+          <li><%= link_to "Register Now ", new_user_registration_path, class:"button-1"  %></li>
+          <li><%= link_to "Log-out", destroy_user_session_path, data: {turbo_method: :delete}, class:"button-1"  %></li>
+        </ul>
+      </div>
+    </header>
+  </div>
 <% else %>
   <div class="landing-page">
     <header>
