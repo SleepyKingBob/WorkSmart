@@ -32,7 +32,10 @@
 
 
  <body class="background-pages">
-    <%= render "shared/navbar" %>
+    <div data-controller="sidebar">
+      <%= render "shared/navbar" %>
+      <%= render "shared/sidebar" %>
+    </div>
     <%= yield %>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>

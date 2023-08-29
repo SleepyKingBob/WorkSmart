@@ -1,0 +1,14 @@
+#sidebar {
+  position: absolute;
+  left: 0px;
+  z-index: 10;
+  height: 100%;
+  background-color: #E2F2EE !important;
+}
+
+.sidebar-item{
+  &:hover{
+    background-color: #4CAF4F;
+    color: white !important;
+  }
+}
