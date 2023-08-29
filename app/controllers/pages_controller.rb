@@ -12,7 +12,6 @@ class PagesController < ApplicationController
   private
 
   def set_user
-    # @user = current_user
-    @user = User.find(1)
+    @user = current_user
   end
 end
