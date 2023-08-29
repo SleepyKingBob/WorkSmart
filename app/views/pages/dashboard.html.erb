@@ -1,0 +1,25 @@
+<div class="card">
+  <% if @user.projects == nil %>
+    <p>You don't have any projects yet</p>
+  <% elsif @active_project == nil %>
+    <h2>Priority Project</h2>
+    <%= @prioritised_projects.first.name %>
+  <% else %>
+    <h2>Active Project</h2>
+    <%= @active_project.name %>
+  <% end %>
+</div>
+
+<div class="card">
+  <h2>View Projects</h2>
+  <% if @user.projects == nil %>
+    <p>You don't have any projects yet</p>
+  <% else %>
+    <% @user.projects.first(4).each do |project| %>
+      <%= project.name %>
+    <% end %>
+  <% end %>
+</div>
+
+<div>
+</div>
