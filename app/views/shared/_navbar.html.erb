@@ -1,31 +1,32 @@
 
 <% if current_user.id == nil %>
   <div class="landing-page">
-        <header>
-          <div class="container">
-            <div class="">
-              <%= image_tag "Logo.png" %>
-              <a href="" class="navbar-text2">Work <b>Smart</b></a>
-            </div>
-            <ul class="links">
-              <li><%= link_to "Home", root_path, class:"navbar-text1"  %></li>
-              <li><%= link_to "About us", root_path, class:"navbar-text1"  %></li>
-              <li><%= link_to "Features", root_path, class:"navbar-text1"  %></li>
-              <li><%= link_to "Log in", user_session_path, class:"navbar-text1"  %></li>
-              <li><%= link_to "Register Now ", new_user_registration_path, class:"button-1"  %></li>
-            </ul>
-          </div>
-        </header>
+    <header>
+      <div class="container">
+        <div class="">
+          <%= image_tag "Logo.png" %>
+          <a href="" class="navbar-text2">Work <b>Smart</b></a>
+        </div>
+        <ul class="links">
+          <li><%= link_to "Home", root_path, class:"navbar-text1"  %></li>
+          <li><%= link_to "About us", root_path, class:"navbar-text1"  %></li>
+          <li><%= link_to "Features", root_path, class:"navbar-text1"  %></li>
+          <li><%= link_to "Log in", user_session_path, class:"navbar-text1"  %></li>
+          <li><%= link_to "Register Now ", new_user_registration_path, class:"button-1"  %></li>
+        </ul>
+      </div>
+    </header>
   </div>
 <% else %>
   <div class="landing-page">
     <header>
       <div class="d-flex justify-content-between w-100 px-4">
         <i class="fa-solid fa-bars my-auto" data-action="click->sidebar#toggle"></i>
-        <a href="" class="logo my-auto">Work <b>Smart</b></a>
-          <ul class="links">
-            <li>Register Now </li>
-          </ul>
+        <a href="" class="navbar-text2 my-auto">Work <b>Smart</b></a>
+        <label class="switch my-auto">
+          <input type="checkbox">
+          <span class="slider round"></span>
+        </label>
       </div>
     </header>
   </div>
