@@ -29,11 +29,13 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body class="background-pages">
-    <%= render "layouts/navbar" %>
+
+
+ <body class="background-pages">
+    <%= render "shared/navbar" %>
     <%= yield %>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <%= render "layouts/footer" %>
+    <%= render "shared/footer" %>
   </body>
 </html>
