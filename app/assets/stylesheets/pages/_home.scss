@@ -74,14 +74,7 @@ ul {
   }
 }
 
-.landing-page header .logo {
-  color: rgba(0, 128, 0, 0.40);
-  font-family: Archivo Black;
-  font-size: 36px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
+
 
 @media (max-width: 767px) {
   .landing-page header .logo {
@@ -115,16 +108,6 @@ ul {
   }
 }
 
-.landing-page header .links li:last-child {
-  border-radius: 2.784px;
-  padding: 10px 20px;
-  color: #FFF;
-  background-color: #4CAF4F;
-}
-
-.landing-page header .links li:not(:last-child):hover {
-  color: #4CAF4F;
-}
 
 .landing-page .content .container {
   display: flex;
