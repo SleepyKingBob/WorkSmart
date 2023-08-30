@@ -1,7 +1,7 @@
 header {
   min-height: 80px;
   display: flex;
-  background-color: #E2F2EE;
+  background-color: #FFFFFF;
 }
 
 a {
@@ -12,4 +12,34 @@ ul {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+.menu {
+  margin-top: 40px;
+  padding-left: 20px;
+}
+
+.logo-text {
+  margin-top: 20px;
+  color: #00800066;
+  font-size: 48px;
+}
+
+.notify-pic {
+  margin-top: 10px;
+
+
+}
+
+.logo {
+  color: #00800066;
+
+}
+
+.button-of {
+  margin-right: 20px;
+}
+
+.notify-icon {
+  margin-top: 20px;
 }

@@ -7,47 +7,59 @@
         <% elsif @active_project == nil %>
           <h2 class= d-text>Priority Project</h2>
           <%= @prioritised_projects.first.name %>
-        <% else %>
-          <h2>Active Project</h2>
-          <%= @active_project.name %>
-        <% end %>
-        <div class= "see-p">
-          <p>See more details</p>
-        </div>
 
-        <div class="Eye">
+          <%= link_to project_path(@prioritised_projects.first.id) do %>
+            <div class= "see-p">
+              <p>See more details</p>
+            </div>
+
+            <div class="Eye">
               <%= image_tag 'Eye.svg' %>
             </div>
 
             <div class="Icons">
               <%= image_tag 'Icons.svg' %>
-          </div>
+            </div>
+          <% end %>
+        <% else %>
+          <h2>Active Project</h2>
+          <%= @active_project.name %>
 
+          <%= link_to project_path(@active_project.id) do %>
+            <div class= "see-p">
+              <p>See more details</p>
+            </div>
+
+            <div class="Icons">
+              <%= image_tag 'Icons.svg' %>
+            </div>
+          <% end %>
+        <% end %>
     </div>
-
+</div>
 
       <div>
-        <div class= "view-projects" >
+        <div class= "view-projects " >
           <h2 class= "d-text">View Projects</h2>
           <% if @user.projects == nil %>
             <p>You don't have any projects yet</p>
           <% else %>
-            <% @user.projects.first(4).each do |project| %>
-              <%= project.name %>
-            <% end %>
+            <ul>
+              <% @user.projects.first(4).each do |project| %>
+                <li><%= project.name %></li>
+              <% end %>
+            </ul>
           <% end %>
-          <div class= see-p>
-            <p>See all Projects</p>
-          </div>
 
-          <div class="Eye">
-              <%= image_tag 'Eye.svg' %>
-          </div>
-          <div class="Icons">
-              <%= image_tag 'Icons.svg' %>
-          </div>
-
-
+          <%= link_to projects_path do %>
+            <div class= see-p>
+              <p>See all Projects</p>
+            </div>
+        
+            <div class="Icons">
+                <%= image_tag 'Icons.svg' %>
+            </div>
+           <% end %>
         </div>
       </div>
     </div>
@@ -55,13 +67,6 @@
     <div>
       <div class= "date-project" >
         <h2 class= "d-text">11th August 2023</h2>
-        <% if @user.projects == nil %>
-          <p>You don't have any projects yet</p>
-        <% else %>
-          <% @user.projects.first(4).each do |project| %>
-            <%= project.name %>
-          <% end %>
-        <% end %>
       </div>
     </div>
   </div>
