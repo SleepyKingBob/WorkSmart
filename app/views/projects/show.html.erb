@@ -1,6 +1,11 @@
 <div class="container">
   <h1><%= @project.name %></h1>
+  <p>Date Started: <%= @project.start_date %></p>
+  <p>Project deadline: <%= @project.dead_line %></p>
+  <p>Hours expected to complete this project: <%= @project.expected_hours %></p>
+  <p>Hours spent on project: <%= @project.hours_worked %>/<%= @project.expected_hours %></p>
 
+  <h2>Tasks</h2>
   <ul>
   <% @project.tasks.each do |task| %>
     <li>
@@ -12,4 +17,5 @@
     </li>
   <% end %>
   </ul>
+  <%= link_to "+ Add a Task", new_project_task_path(@project.id)%>
 </div>
