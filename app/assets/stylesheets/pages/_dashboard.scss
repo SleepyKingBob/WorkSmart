@@ -3,6 +3,7 @@
   margin-top: 100px;
   margin: 20px;
   margin-left: 230px;
+  border-radius: 4%;
 }
 
 .d-text {
@@ -13,7 +14,10 @@
 .view-projects {
   background-color: #FDFDFD80;
   margin-left: 230px;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
+  margin-right: 667px;
+  border-radius: 4%;
+
 }
 
 .date-project {
@@ -27,13 +31,23 @@
   width: 144px;
   height: 30px;
   margin-left: 400px;
+  color: #000000;
+
 }
 
 
 
-.Icons {
+.icons {
   margin-left: 488px;
+  margin-bottom: 10px;
+
 }
 
+.top-corner {
+  position:absolute;
+   top:0;
+   right:0;
+   margin-top: 100px;
+   border-radius: 4%;
 
-
+}
