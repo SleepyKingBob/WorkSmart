@@ -1,7 +1,7 @@
 
 <div data-controller="create-user">
-  <div class="form-box" data-create-user-target="first">
-    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <div class="form-box" data-create-user-target="first">
       <div>
       <p class="text-1 center-text">Create account</p>
       <br/>
@@ -27,12 +27,12 @@
 
       </div>
 
-  </div>
+    </div>
 
   <%# next form %>
 
 
-  <div class="form-box invisible" data-create-user-target="second" >
+    <div class="form-box invisible" data-create-user-target="second" >
       <div>
         <p class="text-1 center-text">Create account</p>
         <br/>
@@ -50,7 +50,7 @@
                       required: true,
                       input_html: { autocomplete: "new-password" } %></li>
           <br/>
-          <%= f.submit "Sign up", class:"button-1 border-0 w-100 d-flex justify-content-center" %> 
+          <li><%= f.submit "Sign up", class:"button-1 border-0 w-100 d-flex justify-content-center" %></li>
           <br/>
           <li><a class="d-flex justify-content-center" data-action="click->create-user#displayForm">Back to the first step</a><li>
 
@@ -58,8 +58,6 @@
           <br/>
          </ul>
       </div>
-
-    <% end %>
-
-  </div>
+    </div>
+  <% end %>
 </div>
