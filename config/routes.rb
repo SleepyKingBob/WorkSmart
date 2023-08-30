@@ -10,8 +10,6 @@ Rails.application.routes.draw do
   end
 
   resources "schedules", only: %i[new create edit update destroy]
-
-
   # Defines the root path route ("/")
   # root "articles#index"
 end
