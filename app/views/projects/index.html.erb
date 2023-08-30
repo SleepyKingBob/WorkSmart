@@ -3,7 +3,14 @@
 
   <ul>
     <% @projects.each do |project| %>
-      <li><%= project.name %></li>
+      <li>
+      <%= project.name %>
+      <%= link_to "View",  project_path(project.id)%>
+      <%= link_to "Delete",
+                  project_path(project.id),
+                  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+      %>
+      </li>
     <% end %>
   </ul>
 </div>
