@@ -3,7 +3,13 @@
 
   <ul>
   <% @project.tasks.each do |task| %>
-    <li><%= task.name %></li>
+    <li>
+    <%= task.name %>
+    <%= link_to "Delete",
+                project_task_path(@project.id, task.id),
+                data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+    %>
+    </li>
   <% end %>
   </ul>
 </div>
