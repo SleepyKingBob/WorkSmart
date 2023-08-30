@@ -1,19 +1,30 @@
 <div class="form-box">
-  <p class="text-1 center-text">Log in</p>
-  <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <div class="form-inputs">
-      <%= f.input :email,
+      <ul>
+      <li><p class="text-1 center-text">Log in</p></li>
+      <br/>
+      <li><%= f.text_field :email, placeholder: "Email", class:"fields-1",
                   required: false,
                   autofocus: true,
-                  input_html: { autocomplete: "email" } %>
-      <%= f.input :password,
+                  input_html: { autocomplete: "email" } %></li>
+      <br/>
+      <li><%= f.text_field :password, placeholder: "Password", class:"fields-1",
                   required: false,
-                  input_html: { autocomplete: "current-password" } %>
-      <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+                  input_html: { autocomplete: "current-password" } %></li>
+      <br/>
+      <li class="d-flex justify-content-center">
+        <%= f.check_box :remember_me, as: :boolean if devise_mapping.rememberable? %>
+        <%= f.label "Remember me" %>
+      </li>
+      <br/>
+      <li class="d-flex justify-content-center"><%= f.submit  "Log in", class:"button-1 border-0 w-100 d-flex justify-content-center" %></li>
+      <br/>
+      <li class="d-flex justify-content-center"><%= render "devise/shared/links" %></li>
+      </ul>
     </div>
-    <div class="form-actions">
-      <%= f.button :submit, "Log in" %>
-    </div>
+
   <% end %>
-  <%= render "devise/shared/links" %>
+
 </div>

@@ -1,0 +1,9 @@
+<div class="container">
+  <h1>All of your unfinished projects</h1>
+
+  <ul>
+    <% @projects.each do |project| %>
+      <li><%= project.name %></li>
+    <% end %>
+  </ul>
+</div>
