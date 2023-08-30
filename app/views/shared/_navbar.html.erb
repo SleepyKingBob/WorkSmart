@@ -19,11 +19,19 @@
   </div>
 <% else %>
   <div class="landing-page">
-    <header>
-      <div class="d-flex justify-content-between w-100 px-4">
-        <i class="fa-solid fa-bars my-auto" data-action="click->sidebar#toggle"></i>
-        <a href="" class="navbar-text2 my-auto">Work <b>Smart</b></a>
-        <label class="switch my-auto">
+    <header class="d-flex my-auto justify-content-between">
+      <div class=" d-flex my-auto menu">
+        <i class="fa-solid fa-bars d-flex my-auto" data-action="click->sidebar#toggle"></i>
+      </div>
+
+      <div class="logo d-flex my-auto ">
+      <%= image_tag 'Logo.png' %>
+        <h1>WorkSmart</h1>
+      </div>
+
+      <div class="d-flex my-auto button-of">
+         <div class= "notify-icon"> <%= image_tag 'notify.png' %> </div>
+         <label class="switch my-auto ">
           <input type="checkbox">
           <span class="slider round"></span>
         </label>
