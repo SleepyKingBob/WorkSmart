@@ -10,11 +10,18 @@ legend ~ div.form-check:first-of-type {
 }
 
 .form-box{
-  position: absolute;
-  z-index:1000;
-  width: 100vw;
-  height: 100vh;
   display: flex;
   justify-content: center;
+  margin-top: 20vh;
   align-items: center;
+  position: fixed;
+  width: 100vw;
+  height: 30vh;
+  z-index:1000;
+}
+
+.fields-1{
+  display: flex;
+  justify-content: center;
+  width: 320px;
 }
