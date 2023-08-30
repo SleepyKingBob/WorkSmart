@@ -10,13 +10,10 @@ class SchedulesController < ApplicationController
   end
 
   def create
-    @user = User.find(params[:user_id])
     @schedule = Schedule.new(schedule_params)
     @schedule.user = current_user
-    @schedule.user = @user
-
     if @schedule.save
-      redirect_to new_user_schedule_path, notice: "schedule was successfully created!"
+      redirect_to dashboard_path, notice: "schedule was successfully created!"
     else
       render :new, status: :unprocessable_entity
     end
@@ -36,7 +33,7 @@ class SchedulesController < ApplicationController
   end
 
   def schedule_params
-    params.require(:schedule).permit(:start_time, :end_time, :luch_break)
+    params.require(:schedule).permit(:start_time, :end_time, :lunch_break)
   end
 
 end

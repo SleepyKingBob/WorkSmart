@@ -35,7 +35,7 @@
 <div class= "view-projects " >
     <h2 class= "d-text">View Projects</h2>
     <% if @user.projects == nil %>
-    <p>You don't have any projects yet</p>
+      <p>You don't have any projects yet</p>
     <% else %>
     <ul>
     <% @user.projects.first(4).each do |project| %>
@@ -57,5 +57,22 @@
 <div>
 
 <div class= "top-corner date-project" >
-  <h2 class= "d-text">11th August 2023</h2>
+  <div class="m-3">
+    <h2 class="text-2 text-center pt-3"><%= Date.today %></h2>
+    <br/>
+
+    <% if @user.schedule == nil %>
+      <p class="text-2">You don't have any schedule yet</p>
+    <% else %>
+
+      <ul>
+        <li class="text-2">Start Time: <%= @user.schedule.start_time.strftime("%H:%M") %></li>
+        <br/>
+        <li class="text-2">Lunch Break: <%= @user.schedule.lunch_break.strftime("%H:%M") %></li>
+        <br/>
+        <li class="text-2 pb-3">End Time: <%= @user.schedule.end_time.strftime("%H:%M") %></li>
+      </ul>
+
+    <% end %>
+  </div>
 </div>
