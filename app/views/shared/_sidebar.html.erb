@@ -5,32 +5,35 @@
     </a>
     <hr>
     <ul class="nav nav-pills flex-column mb-auto">
-      <li class="nav-item">
-        <a href="#" class="nav-link link-dark sidebar-item" aria-current="page">
+      <%= link_to dashboard_path do %>
+        <li class="nav-item nav-link link-dark sidebar-item">
           <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
-          Home
-        </a>
-      </li>
-      <li>
-        <a href="#" class="nav-link link-dark sidebar-item">
-          <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"></use></svg>
-          All Projects
-        </a>
-      </li>
-      <li>
-        <a href="#" class="nav-link link-dark sidebar-item">
-          <svg class="bi me-2" width="16" height="16"><use xlink:href="#table"></use></svg>
-          Add Projects
-        </a>
-      </li>
+            Home
+        </li>
+      <% end %>
+      <%= link_to projects_path do %>
+        <li class="nav-item nav-link link-dark sidebar-item">
+          <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
+            All Projects
+        </li>
+      <% end %>
+      <%= link_to new_project_path do %>
+        <li class="nav-item nav-link link-dark sidebar-item">
+          <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
+            Add a Project
+        </li>
+      <% end %>
       <li>
         <a href="#" class="nav-link link-dark sidebar-item">
           <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
           Settings
         </a>
-      </li>
       <li>
-        <%= link_to "Log-out", destroy_user_session_path, data: {turbo_method: :delete}, class:"nav-link link-dark sidebar-item"  %>
-      </li>
+      <%= link_to destroy_user_session_path, data: {turbo_method: :delete}, class:"link-dark sidebar-item" do  %>
+        <li class="nav-item nav-link sidebar-item">
+          <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
+            Logout
+        </li>
+      <% end %>
     </ul>
 </div>
