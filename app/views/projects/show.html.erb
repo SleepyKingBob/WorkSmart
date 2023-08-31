@@ -1,40 +1,51 @@
 
-<div class="container show-form ">
-  <h1><%= @project.name %></h1>
-  <p>Date Started: <%= @project.start_date %></p>
-  <p>Project deadline: <%= @project.dead_line %></p>
-  <p>Hours expected to complete this project: <%= @project.expected_hours %></p>
-  <p>Hours spent on project: <%= @project.hours_worked %>/<%= @project.expected_hours %></p>
+<div class="container show-form p-3 pb-5">
+  <div class="d-flex justify-content-around">
+    <div class="my-3">
+      <h1><%= @project.name %></h1>
+      <p>Date Started: <%= @project.start_date %></p>
+      <p>Project deadline: <%= @project.dead_line %></p>
+      <p>Hours expected to complete this project: <%= @project.expected_hours %></p>
+      <p>Hours spent on project: <%= @project.hours_worked %>/<%= @project.expected_hours %></p>
+      <p><%= @percentage %>% completed</p>
+      <% unless @project.active %>
+      <%= link_to "Mark as Active", project_active_path(@project.id), class:"button-1 my-auto" %>
+      <% end %>
+    </div>
 
-  <%= link_to "Mark as Active", project_active_path(@project.id) %>
-
-  <h2>Tasks</h2>
-  <ul data-controller="task_toggler">
-  <% @project.tasks.each do |task| %>
-    <% if task.completed %>
-      <li>
-        <%= link_to checkbox_path(task) do %>
-        <i class="fa-solid fa-square-check" style="color: #33ba21;"></i>
+    <div class="my-4">
+      <h2>Tasks</h2>
+      <ul>
+      <% @tasks.each do |task| %>
+        <% if task.completed %>
+          <li class="my-3">
+            <%= link_to checkbox_path(task) do %>
+            <i class="fa-solid fa-square-check" style="color: #33ba21;"></i>
+            <% end %>
+            <%= task.name %>
+            <%= link_to project_task_path(@project.id, task.id),
+                        data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do
+            %>
+              <i class="fa-solid fa-trash" style="color: #0dc200;"></i>
+            <% end %>
+          </li>
+        <% else %>
+          <li class="my-3">
+            <%= link_to checkbox_path(task) do %>
+            <i class="fa-regular fa-square" style="color: #1ae000;"></i>
+            <% end %>
+            <%= task.name %>
+            <%= link_to project_task_path(@project.id, task.id),
+                        data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do
+            %>
+              <i class="fa-solid fa-trash" style="color: #0dc200;"></i>
+            <% end %>
+          </li>
         <% end %>
-        <%= task.name %>
-        <%= link_to "Delete",
-                    project_task_path(@project.id, task.id),
-                    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
-        %>
-      </li>
-    <% else %>
-      <li>
-        <%= link_to checkbox_path(task) do %>
-        <i class="fa-regular fa-square" style="color: #1ae000;"></i>
-        <% end %>
-        <%= task.name %>
-        <%= link_to "Delete",
-                    project_task_path(@project.id, task.id),
-                    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
-        %>
-      </li>
-    <% end %>
-  <% end %>
-  </ul>
-  <%= link_to "+ Add a Task", new_project_task_path(@project.id)%>
+      <% end %>
+      </ul>
+      <br/>
+      <%= link_to "+ Add a Task", new_project_task_path(@project.id), class:"button-1"%>
+    </div>
+  </div>
 </div>
