@@ -9,6 +9,10 @@ class SchedulesController < ApplicationController
     @schedule = Schedule.new
   end
 
+  def show
+
+  end
+
   def create
     @schedule = Schedule.new(schedule_params)
     @schedule.user = current_user
@@ -19,17 +23,15 @@ class SchedulesController < ApplicationController
     end
   end
 
-  def show; end
-
   def destroy
     @schedule.destroy
-    redirect_to profile_schedules_path(current_user.id)
+    redirect_to schedules_path
   end
 
   private
 
   def set_schedule
-    @schedule = schedule.find(params[:id])
+    @schedule = Schedule.find(params[:id])
   end
 
   def schedule_params

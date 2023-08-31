@@ -58,19 +58,28 @@
 
 <div class= "top-corner date-project" >
   <div class="m-3">
-    <h2 class="text-2 text-center pt-3"><%= Date.today %></h2>
+    <h2 class="text-2 text-center pt-3"><%= Date.today.strftime("%d-%m-%Y") %></h2>
     <br/>
 
     <% if @user.schedule == nil %>
       <p class="text-2">You don't have any schedule yet</p>
     <% else %>
+      <% start_time = @user.schedule.start_time %>
+      <% lunch_break = @user.schedule.lunch_break %>
+      <% end_time = @user.schedule.end_time %>
+      <% middle_start_break_time = start_time + (lunch_break - start_time) / 2 %>
+      <% middle_break_end_time = lunch_break + (end_time - lunch_break) / 2 %>
 
       <ul>
-        <li class="text-2">Start Time: <%= @user.schedule.start_time.strftime("%H:%M") %></li>
+        <li class="text-2">Start Time: <%= start_time.strftime("%H:%M") %></li>
         <br/>
-        <li class="text-2">Lunch Break: <%= @user.schedule.lunch_break.strftime("%H:%M") %></li>
+        <li class="text-2">Break: <%= middle_start_break_time.strftime("%H:%M") %></li>
         <br/>
-        <li class="text-2 pb-3">End Time: <%= @user.schedule.end_time.strftime("%H:%M") %></li>
+        <li class="text-2">Lunch Break: <%= lunch_break.strftime("%H:%M") %></li>
+        <br/>
+        <li class="text-2">Break: <%= middle_break_end_time.strftime("%H:%M") %></li>
+        <br/>
+        <li class="text-2 pb-3">End Time: <%= end_time.strftime("%H:%M") %></li>
       </ul>
 
     <% end %>

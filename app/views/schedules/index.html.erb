@@ -1,0 +1,12 @@
+<h1>All Schedules</h1>
+
+<ul>
+  <% @schedules.each do |schedule| %>
+    <li>
+      <%= link_to schedule_path(schedule) do %>
+        <%= schedule.start_time %> - <%= schedule.end_time %>
+      <% end %>
+      <%= link_to "Delete", schedule_path(schedule), method: :delete, data: { confirm: "Are you sure?" } %>
+    </li>
+  <% end %>
+</ul>
