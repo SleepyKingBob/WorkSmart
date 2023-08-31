@@ -1,0 +1,80 @@
+
+
+.nabar-button {
+  font-family: Montserrat, sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  color: rgb(76, 175, 79);
+  padding: 8px 28px;
+  border-radius: 25px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: rgb(76, 175, 79);
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+.nabar-button:hover {
+  background: white;
+  border: 2px solid #4CAF4F;
+}
+
+
+.nabar-button-login {
+  font-family: Montserrat, sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  color: rgb(76, 175, 79);
+  padding: 8px 28px;
+  border-radius: 25px;
+  border-width: 2px;
+  border-color: rgb(76, 175, 79);
+}
+
+.nabar-button-login:hover {
+  background: white;
+  border: 2px solid #4CAF4F;
+}
+
+
+.nabar-button-logout {
+  font-family: Montserrat, sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  margin-top: 20px;
+  color: rgb(76, 175, 79);
+  padding: 8px 28px;
+  border-radius: 25px;
+  border-width: 2px;
+  border-color: rgb(76, 175, 79);
+}
+.nabar-button-logout:hover {
+  background: white;
+  border: 2px solid #4CAF4F;
+}
+
+.navbar-page {
+  font-family: Montserrat, sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  margin-top: 10px;
+
+}
+
+.button-of{
+  margin-right: 20px;
+  margin-top: 21px;
+}
+
