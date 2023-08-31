@@ -6,16 +6,34 @@
   <p>Hours expected to complete this project: <%= @project.expected_hours %></p>
   <p>Hours spent on project: <%= @project.hours_worked %>/<%= @project.expected_hours %></p>
 
+  <%= link_to "Mark as Active", project_active_path(@project.id) %>
+
   <h2>Tasks</h2>
-  <ul>
+  <ul data-controller="task_toggler">
   <% @project.tasks.each do |task| %>
-    <li>
-    <%= task.name %>
-    <%= link_to "Delete",
-                project_task_path(@project.id, task.id),
-                data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
-    %>
-    </li>
+    <% if task.completed %>
+      <li>
+        <%= link_to checkbox_path(task) do %>
+        <i class="fa-solid fa-square-check" style="color: #33ba21;"></i>
+        <% end %>
+        <%= task.name %>
+        <%= link_to "Delete",
+                    project_task_path(@project.id, task.id),
+                    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+        %>
+      </li>
+    <% else %>
+      <li>
+        <%= link_to checkbox_path(task) do %>
+        <i class="fa-regular fa-square" style="color: #1ae000;"></i>
+        <% end %>
+        <%= task.name %>
+        <%= link_to "Delete",
+                    project_task_path(@project.id, task.id),
+                    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+        %>
+      </li>
+    <% end %>
   <% end %>
   </ul>
   <%= link_to "+ Add a Task", new_project_task_path(@project.id)%>

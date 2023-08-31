@@ -1,6 +1,6 @@
 class TasksController < ApplicationController
   before_action :set_project, only: %i[new create destroy]
-  before_action :set_task, only: %i[destroy]
+  before_action :set_task, only: %i[destroy checkbox]
 
   def new
     @task = Task.new
@@ -19,6 +19,12 @@ class TasksController < ApplicationController
   def destroy
     @task.destroy
     redirect_to project_path(@project.id), status: :see_other
+  end
+
+  def checkbox
+    @task.completed = !@task.completed
+    @task.save
+    redirect_to project_path(@task.project.id)
   end
 
   private

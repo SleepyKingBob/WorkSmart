@@ -5,7 +5,7 @@
         <% if @user.projects == [] %>
           <p>You don't have any projects yet</p>
         <% elsif @active_project == nil %>
-          <h2 class= d-text>Priority Project</h2>
+          <h2 class="d-text">Priority Project</h2>
           <%= @prioritised_projects.first.name  %>
           <%= link_to project_path(@prioritised_projects.first.id) do %>
 
@@ -19,13 +19,16 @@
 
           <% end %>
         <% else %>
-          <h2>Active Project</h2>
+          <h2 class="d-text">Active Project</h2>
           <%= @active_project.name %>
 
           <%= link_to project_path(@active_project.id) do %>
             <div class= "see-p">
               <p>See more details</p>
+            </div>
+            <div class="icons">
               <%= image_tag 'Icons.svg' %>
+            </div>
           <% end %>
         <% end %>
     </div>
@@ -63,8 +66,7 @@
     <br/>
 
     <% if @user.schedule == nil %>
-      <p class="text-2">You don't have </p>
-      <p class="text-2">any schedule yet</p>
+      <p class="text-2">You don't have any schedule yet</p>
     <% else %>
       <% start_time = @user.schedule.start_time %>
       <% lunch_break = @user.schedule.lunch_break %>
