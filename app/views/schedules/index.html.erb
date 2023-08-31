@@ -1,6 +1,7 @@
 <h1>All Schedules</h1>
+    <%= link_to "Add Schedule", new_schedule_path, class:"button-1 gco -"%>
 
-<ul>
+<ul class="mt-5">
   <% @schedules.each do |schedule| %>
     <li>
       <%= link_to schedule_path(schedule) do %>
