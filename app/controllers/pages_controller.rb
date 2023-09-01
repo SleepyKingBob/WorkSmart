@@ -8,7 +8,7 @@ class PagesController < ApplicationController
   def dashboard
     @prioritised_projects = @user.projects.sort_by { |project| project[:dead_line] }
     @active_project = @user.projects.find { |project| project[:active] == true }
-    if @prioritised_projects.nil?
+    if @prioritised_projects.nil? || @prioritised_projects.empty?
       @prioritised_project_completed = []
     else
       @prioritised_project_completed = @prioritised_projects.first.tasks.where(completed: true)
