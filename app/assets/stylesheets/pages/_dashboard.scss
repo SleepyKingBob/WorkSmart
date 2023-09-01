@@ -1,10 +1,10 @@
 .page-grid {
-  margin-top: 3rem;
+  margin-top: 0.5rem;
+
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(3, 1fr);
 }
-
 
 .priority-card {
   grid-column: 1;
@@ -15,8 +15,8 @@
   height: 18rem;
   width: 40rem;
   border-radius: 0.5rem;
-
 }
+
 .priority-card:hover {
   transform: scale(1.05);
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
@@ -52,4 +52,21 @@
 .schedule-card:hover {
   transform: scale(1.05);
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.see-project {
+  display:flex;
+  align-items: center;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+}
+.a-t{
+  display: flex;
+  align-items: center;
+}
+
+.icon-project {
+
 }
