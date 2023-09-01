@@ -28,45 +28,15 @@
   display: flex;
 }
 
-@media (max-width: 767px) {
-  .landing-page header {
-    min-height: auto;
-    display: initial;
-  }
-}
-
 .landing-page header .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-@media (max-width: 767px) {
-  .landing-page header .container {
-    flex-direction: column;
-    justify-content: center;
-  }
-}
-
-
-
-@media (max-width: 767px) {
-  .landing-page header .logo {
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-}
-
 .landing-page header .links {
   display: flex;
   align-items: center;
-}
-
-@media (max-width: 767px) {
-  .landing-page header .links {
-    text-align: center;
-    gap: 10px;
-  }
 }
 
 .landing-page header .links li {
@@ -76,58 +46,19 @@
   transition: .3s;
 }
 
-@media (max-width: 767px) {
-  .landing-page header .links li {
-    margin-left: auto;
-  }
-}
-
-
 .landing-page .content .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 140px;
-  min-height: calc(100vh - 80px);
+  min-height: calc(70vh - 80px);
 }
-
-@media (max-width: 767px) {
-  .landing-page .content .container {
-    gap: 0;
-    min-height: calc(100vh - 101px);
-    justify-content: center;
-    flex-direction: column-reverse;
-  }
-}
-
-@media (max-width: 767px) {
-  .landing-page .content .info {
-    color: var(--neutral-d-grey, #4D4D4D);
-    font-family: Inter;
-    font-size: 44.548px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 52.901px;
-  }
-}
-
-@media (max-width: 767px) {
-  .landing-page .content {
-    color: var(--brand-primary, #4CAF4F);
-    font-family: Inter;
-    font-size: 44.548px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 52.901px;
-  }
-}
-
-
 
 .landing-page .content .info {
   h1 {
-    color: #5d5d5d;
-    font-size: 44px;
+    color: black;
+    font-weight: 700;
+    font-size: 30px;
   }
 
   p {
@@ -140,20 +71,121 @@
 
 .Green-text {
   color: #4CAF4F !important;
+  font-weight: 700;
+  font-size: 30px;
+
 }
 
-.landing-page .content .info button {
-  border: 0;
-  border-radius: 2.784px;
-  padding: 12px 30px;
-  margin-top: 30px;
-  cursor: pointer;
-  color: #FFF;
-  background-color: #4CAF4F;
+.about {
+  padding: 130px 0;
+  background-color: white;
 }
 
-.landing-page .content .image img {
-  max-width: 100%;
+.about .heading h2 {
+  font-size: 30px;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+
+}
+
+.about .heading h2 span {
+  color: #4CAF4F;
+
+}
+
+.about .heading p {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #999999;
+  margin: 20px 0 60px;
+  padding: 0;
+}
+
+.about h3 {
+  font-size: 25px;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+}
+
+.about p {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #999999;
+  margin: 20px 0 15px;
+  padding: 0;
+}
+
+.about h4 {
+  font-size: 15px;
+  font-weight: 500;
+  margin: 8px 0;
+}
+
+.about h4 i {
+  color: #4CAF4F;
+  margin-right: 10px;
 }
 
 /* End Landing Page */
+
+#call-to-action {
+  background-size: cover;
+  padding: 60px 0;
+}
+
+#call-to-action h3 {
+  color: black;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+#call-to-action p {
+  color: black;
+}
+
+#call-to-action .cta-btn {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 28px;
+  border-radius: 25px;
+  transition: 0.5s;
+  margin-top: 10px;
+  border: 2px solid #4CAF4F;
+  color: #4CAF4F;
+}
+
+#call-to-action .cta-btn:hover {
+  background: white;
+  border: 2px solid #4CAF4F;
+}
+
+
+.register-button{
+  font-family: Montserrat, sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  margin-top: 10px;
+  color: rgb(76, 175, 79);
+  padding: 8px 28px;
+  border-radius: 25px;
+  border-width: 2px;
+  border-color: rgb(76, 175, 79);
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+.register-button:hover {
+  background: white;
+  border: 2px solid #4CAF4F;
+}
