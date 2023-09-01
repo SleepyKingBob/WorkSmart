@@ -9,7 +9,8 @@ Rails.application.routes.draw do
     resources "tasks", only: %i[new create update destroy]
   end
 
-  resources "schedules", only: %i[index new show create edit update destroy]
+  resources :schedules, only: %i[index new show create edit update destroy]
+
   # Defines the root path route ("/")
   # root "articles#index"
 end

@@ -7,6 +7,7 @@
 #   Character.create(name: "Luke", movie: movies.first)
 puts "Deleting all Projects..."
 Project.destroy_all
+Schedule.destroy_all
 
 puts "Creating New Projects..."
 project1 = Project.create(
@@ -41,5 +42,7 @@ project3 = Project.create(
 Task.create(name: "Replace World leaders with idiots", project_id: project3.id)
 Task.create(name: "Cripple the Economy", project_id: project3.id)
 Task.create(name: "Get a bagel", project_id: project3.id)
+
+Schedule.create!(user_id: User.last.id, start_time: Time.now, lunch_break: Time.now + 5400, end_time: Time.now + 15400)
 
 puts "Finished!"
