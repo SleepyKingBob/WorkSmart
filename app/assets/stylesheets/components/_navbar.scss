@@ -4,36 +4,97 @@ header {
   background-color: #FFFFFF;
 }
 
-a {
-  text-decoration: none;
+.menu {
+  margin-top: 40px;
+  padding-left: 17px;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.notify-icon {
+  margin-top: 20px;
 }
+
+
+.nabar-button {
+  font-family: Montserrat, sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  color: rgb(76, 175, 79);
+  padding: 8px 28px;
+  border-radius: 25px;
+  border-width: 2px;
+  border-color: rgb(76, 175, 79);
+}
+
+.nabar-button:hover {
+  background: white;
+  border: 2px solid #4CAF4F;
+}
+
+
+.nabar-button-login {
+  font-family: Montserrat, sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  color: rgb(76, 175, 79);
+  padding: 8px 28px;
+  border-radius: 25px;
+  border-width: 2px;
+  border-color: rgb(76, 175, 79);
+}
+
+.nabar-button-login:hover {
+  background: white;
+  border: 2px solid #4CAF4F;
+}
+
+
+.nabar-button-start {
+  font-family: Montserrat, sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  margin-top: 20px;
+  color: rgb(76, 175, 79);
+  padding: 8px 28px;
+  border-radius: 25px;
+  border-width: 2px;
+  border-color: rgb(76, 175, 79);
+  margin-bottom: 10px;
+}
+.nabar-button-start:hover {
+  background: white;
+  border: 2px solid #4CAF4F;
+}
+
+.navbar-text {
+  font-family: Montserrat, sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  margin-top: 10px;
+  list-style: none;
+
+}
+
+.l-r-space{
+  margin-right: 20px;
+  margin-top: 21px;
+}
+
 
 .menu {
   margin-top: 40px;
-  padding-left: 145px;
-}
-
-.logo-text {
-  margin-top: 20px;
-  color: #00800066;
-  font-size: 48px;
-}
-
-.notify-pic {
-  margin-top: 10px;
-
-
-}
-
-
-.button-of {
-  margin-right: 20px;
+  padding-left: 17px;
 }
 
 .notify-icon {

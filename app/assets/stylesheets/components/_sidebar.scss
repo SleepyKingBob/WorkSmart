@@ -1,13 +1,54 @@
+a {
+  text-decoration: none ;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.logo-text {
+  font-family: Montserrat, sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  color: rgb(76, 175, 79);
+
+}
+
+.logo-2 {
+  padding-right: 5px;
+}
+
+.home-text {
+  font-family: Montserrat, sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+
+}
+
+
+
+
+
 #sidebar {
   position: absolute;
   left: 0px;
   z-index: 10;
   height: 100%;
-  background-color: #FFFFFF !important;
+  background-color: #ccc !important;
+  opacity: 90%;
+
 }
 
-.sidebar-item{
-  &:hover{
+.sidebar-item {
+  &:hover {
     background-color: #4CAF4F;
     color: white !important;
   }
@@ -53,15 +94,15 @@
   transition: .4s;
 }
 
-input:checked + .slider {
+input:checked+.slider {
   background-color: #4CAF4F;
 }
 
-input:focus + .slider {
+input:focus+.slider {
   box-shadow: 0 0 1px #4CAF4F;
 }
 
-input:checked + .slider:before {
+input:checked+.slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);

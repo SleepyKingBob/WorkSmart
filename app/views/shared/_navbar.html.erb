@@ -5,7 +5,7 @@
         <div class="">
           <%= image_tag "Logo.png" %>
         </div>
-        <ul class="links">
+        <ul class="links navbar-text">
           <li><%= link_to "Home", root_path, class:"navbar-text1"  %></li>
           <li><%= link_to "About us", root_path, class:"navbar-text1"  %></li>
           <li><%= link_to "Features", root_path, class:"navbar-text1"  %></li>
@@ -25,15 +25,9 @@
       <%= image_tag 'Logo.png' %>
       </div>
 
-      <div class="d-flex my-auto button-of ">
+      <div class="d-flex my-auto l-r-space ">
          <div class= "notify-icon"> <%= image_tag 'notify.png' %> </div>
-         <label class="switch my-auto">
-          <input type="checkbox">
-
-          <span class="slider round" data-action="click->start#updateSchedule"></span>
-          <%= link_to "Log-out", destroy_user_session_path, data: {turbo_method: :delete}, class:"nabar-button-logout" %>
-
-        </label>
+          <button class="nabar-button-start"> Start Work!</button>
       </div>
     </header>
   </div>
