@@ -6,9 +6,10 @@
       <% elsif @active_project == nil %>
         <h2 class= d-text>Priority Project</h2>
         <%= @prioritised_projects.first.name  %>
+        <p><%= @prioritised_project_percentage %>% completed</p>
         <%= link_to project_path(@prioritised_projects.first.id) do %>
         <div class= "see-p">
-          <p>See all Projects</p>
+          <p>View Project</p>
         </div>
         <div class="icons">
           <%= image_tag 'Icons.svg' %>
@@ -17,6 +18,7 @@
       <% else %>
         <h2>Active Project</h2>
         <%= @active_project.name %>
+        <p><%= @active_project_percentage %>% completed</p>
         <%= link_to project_path(@active_project.id) do %>
         <div class= "">
           <p>See more details</p>
@@ -55,4 +57,3 @@
     <%= render "pages/schedule", user: current_user %>
   </div>
 </div>
-
