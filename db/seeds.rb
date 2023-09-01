@@ -43,6 +43,6 @@ Task.create(name: "Replace World leaders with idiots", project_id: project3.id)
 Task.create(name: "Cripple the Economy", project_id: project3.id)
 Task.create(name: "Get a bagel", project_id: project3.id)
 
-Schedule.create!(user_id: User.last.id, start_time: Time.now, lunch_break: Time.now + 5400, end_time: Time.now + 15400)
+Schedule.create!(user_id: User.last.id, start_time: Time.now, lunch_break: Time.now + 5400, end_time: Time.now + 15_400)
 
 puts "Finished!"

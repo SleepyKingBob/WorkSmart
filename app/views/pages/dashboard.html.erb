@@ -2,25 +2,25 @@
   <div>
     <div class="priority-card">
       <% if @user.projects == [] %>
-        <p>You don't have any projects yet</p>
+        <p class= text-2>You don't have any projects yet</p>
       <% elsif @active_project == nil %>
-        <h2 class= d-text>Priority Project</h2>
-        <%= @prioritised_projects.first.name  %>
+        <h2 class= "text-2 text-center pt-2">Priority Project</h2>
+        <p class="text-4 pt-3 pb-2"><%= @prioritised_projects.first.name %></p>
+        <p class="text-5 text-center pt-5"><%= @prioritised_project_percentage %>% completed</p>
         <%= link_to project_path(@prioritised_projects.first.id) do %>
-        <div class= "see-p">
-          <p>See all Projects</p>
-        </div>
-        <div class="icons">
+        <div class="see-project">
+          <p class= "text-3 pt-3 ">See all Projects</p>
           <%= image_tag 'Icons.svg' %>
         </div>
       <% end %>
       <% else %>
-        <h2>Active Project</h2>
-        <%= @active_project.name %>
+        <h2 class= "text-2 text-center pt-2">Active Project</h2>
+        <p class="text-4 pt-3 pb-2"><%= @active_project.name %></p>
+        <p class="text-5 text-center pt-5"><%= @active_project_percentage %>% completed</p>
         <%= link_to project_path(@active_project.id) do %>
-        <div class= "">
-          <p>See more details</p>
-          <%= image_tag 'Icons.svg' %>
+        <div class="see-project">
+          <p class= "text-3 pt-3 ">See more details</p>
+          <%= image_tag 'Icons.svg', class:"icon-procjet" %>
         </div>
       <% end %>
       <% end %>
@@ -28,21 +28,19 @@
 
 
     <div class= "view-card" >
-      <h2>View Projects</h2>
+      <h2 class="text-2 text-center pt-2">View Projects</h2>
       <% if @user.projects == nil %>
-        <p>You don't have any projects yet</p>
+        <p class="text-4">You don't have any projects yet</p>
       <% else %>
       <ul>
       <% @user.projects.first(4).each do |project| %>
-        <li><%= project.name %></li>
+        <li class="text-4 pt-3"> <%= project.name %></li>
       <% end %>
       </ul>
       <% end %>
       <%= link_to projects_path do %>
-      <div class= >
-        <p>See all Projects</p>
-      </div>
-      <div>
+      <div class="see-project" >
+        <p class= "text-3 pt-3">See all Projects</p>
         <%= image_tag 'Icons.svg' %>
       </div>
       <% end %>
