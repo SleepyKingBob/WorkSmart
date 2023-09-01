@@ -10,7 +10,6 @@ class SchedulesController < ApplicationController
   end
 
   def show
-
   end
 
   def create
@@ -56,5 +55,4 @@ class SchedulesController < ApplicationController
   def update_schedule_params
     params.require(:schedule).permit(:start_time, :end_time, :lunch_break)
   end
-
 end
