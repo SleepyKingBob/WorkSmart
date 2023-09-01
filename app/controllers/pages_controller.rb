@@ -8,7 +8,6 @@ class PagesController < ApplicationController
   def dashboard
     @prioritised_projects = @user.projects.sort_by { |project| project[:dead_line] }
     @active_project = @user.projects.find { |project| project[:active] == true }
-    
   end
 
   private
