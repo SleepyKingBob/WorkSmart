@@ -4,9 +4,9 @@
       <% if @user.projects == [] %>
         <p class= text-2>You don't have any projects yet</p>
       <% elsif @active_project == nil %>
-        <h2 class= "text-2 ">Priority Project</h2>
-        <p class="text-4 pt-3"><%= @prioritised_projects.first.name %></p>
-        <p class="text-4"><%= @prioritised_project_percentage %>completed</p>
+        <h2 class= "text-2 text-center pt-2">Priority Project</h2>
+        <p class="text-4 pt-3 pb-2"><%= @prioritised_projects.first.name %></p>
+        <p class="text-5 text-center pt-5"><%= @prioritised_project_percentage %>% completed</p>
         <%= link_to project_path(@prioritised_projects.first.id) do %>
         <div class="see-project">
           <p class= "text-3 pt-3 ">See all Projects</p>

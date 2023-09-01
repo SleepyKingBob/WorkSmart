@@ -4,7 +4,7 @@
   <ul>
     <% @projects.each do |project| %>
       <li class="d-flex w-100 justify-content-around">
-        <p class="text-4 my-4 w-25"><%= project.name %></p>
+        <p class="text-7 my-4 w-25"><%= project.name %></p>
         <div class="p-2 align-self-center d-flex justify-content-around w-25">
           <%= link_to "View",  project_path(project.id), class:"button-1 my-auto"%>
           <%= link_to "Delete",
