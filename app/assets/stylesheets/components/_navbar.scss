@@ -25,7 +25,12 @@ header {
   padding: 8px 28px;
   border-radius: 25px;
   border-width: 2px;
+  border-style: solid;
   border-color: rgb(76, 175, 79);
+  text-decoration: none;
+  transition: 0.5s;
+  background-color: #d2f8e7;
+  color: rgb(4, 8, 4);
 }
 
 .nabar-button:hover {
@@ -46,6 +51,7 @@ header {
   border-radius: 25px;
   border-width: 2px;
   border-color: rgb(76, 175, 79);
+
 }
 
 .nabar-button-login:hover {
