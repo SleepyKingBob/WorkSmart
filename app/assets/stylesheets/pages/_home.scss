@@ -1,24 +1,24 @@
 // Specific CSS for your home-page
 /* Small */
-@media (min-width: 768px) {
-  .container {
-    width: 750px;
-  }
-}
+// @media (min-width: 768px) {
+//   .container {
+//     width: 750px;
+//   }
+// }
 
-/* Medium */
-@media (min-width: 992px) {
-  .container {
-    width: 970px;
-  }
-}
+// /* Medium */
+// @media (min-width: 992px) {
+//   .container {
+//     width: 970px;
+//   }
+// }
 
-/* Large */
-@media (min-width: 1200px) {
-  .container {
-    width: 1170px;
-  }
-}
+// /* Large */
+// @media (min-width: 1200px) {
+//   .container {
+//     width: 1170px;
+//   }
+// }
 
 /* End Global Rules */
 
@@ -59,6 +59,7 @@
     color: black;
     font-weight: 700;
     font-size: 30px;
+    margin-left: 161px;
   }
 
   p {
@@ -66,6 +67,7 @@
     line-height: 1.6;
     font-size: 15px;
     color: #5d5d5d;
+    margin-left: 161px;
   }
 }
 
@@ -101,6 +103,7 @@
   color: #999999;
   margin: 20px 0 60px;
   padding: 0;
+
 }
 
 .about h3 {
@@ -183,6 +186,7 @@
   border-color: rgb(76, 175, 79);
   text-decoration: none;
   transition: 0.5s;
+  margin-left: 161px;
 }
 
 .register-button:hover {

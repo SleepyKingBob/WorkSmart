@@ -9,5 +9,6 @@ export default class extends Controller {
 
   toggle() {
     this.sidebarTarget.classList.toggle("d-none")
+  
   }
 }
