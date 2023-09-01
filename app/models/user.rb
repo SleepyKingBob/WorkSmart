@@ -6,5 +6,5 @@ class User < ApplicationRecord
 
   validates :email, :password, :work_hours, presence: true
   has_many :projects
-  has_one :schedule
+  has_one :schedule, dependent: :destroy
 end
