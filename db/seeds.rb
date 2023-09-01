@@ -15,7 +15,7 @@ project1 = Project.create(
   start_date: Date.new(2023, 8, 24),
   dead_line: Date.new(2023, 9, 10),
   expected_hours: 50,
-  user_id: 1
+  user_id: User.last.id
 )
 Task.create(name: "Setup Server", project_id: project1.id)
 Task.create(name: "Design Website", project_id: project1.id)
@@ -26,7 +26,7 @@ project2 = Project.create(
   start_date: Date.new(2023, 8, 24),
   dead_line: Date.new(2023, 8, 26),
   expected_hours: 2,
-  user_id: 1
+  user_id: User.last.id
 )
 Task.create(name: "Book Room", project_id: project2.id)
 Task.create(name: "Prep Slides", project_id: project2.id)
@@ -37,7 +37,7 @@ project3 = Project.create(
   start_date: Date.new(2023, 8, 24),
   dead_line: Date.new(2024, 1, 1),
   expected_hours: 100,
-  user_id: 1
+  user_id: User.last.id
 )
 Task.create(name: "Replace World leaders with idiots", project_id: project3.id)
 Task.create(name: "Cripple the Economy", project_id: project3.id)
