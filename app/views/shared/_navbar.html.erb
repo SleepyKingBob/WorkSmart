@@ -27,10 +27,12 @@
 
       <div class="d-flex my-auto button-of ">
          <div class= "notify-icon"> <%= image_tag 'notify.png' %> </div>
-         <label class="switch my-auto ">
+         <label class="switch my-auto">
           <input type="checkbox">
-          <span class="slider round"></span>
+
+          <span class="slider round" data-action="click->start#updateSchedule"></span>
           <%= link_to "Log-out", destroy_user_session_path, data: {turbo_method: :delete}, class:"nabar-button-logout" %>
+
         </label>
       </div>
     </header>

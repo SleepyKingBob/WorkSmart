@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get "tasks/:id/checkbox", to: "tasks#checkbox", as: "checkbox"
 
   resources "schedules", only: %i[index new show create edit update destroy]
+
   # Defines the root path route ("/")
   # root "articles#index"
 end

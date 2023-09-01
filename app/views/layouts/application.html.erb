@@ -31,14 +31,18 @@
 
 
 
- <body class="background-pages">
-    <div data-controller="sidebar">
-      <%= render "shared/navbar" %>
-      <%= render "shared/sidebar" %>
+  <body class="background-pages">
+    <div data-controller="start">
+      <div data-controller="sidebar">
+        <%= render "shared/navbar" %>
+        <%= render "shared/sidebar" %>
+      </div>
+      <%= yield %>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+      <%= render "shared/footer" %>
+
     </div>
-    <%= yield %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= render "shared/footer" %>
   </body>
+
 </html>

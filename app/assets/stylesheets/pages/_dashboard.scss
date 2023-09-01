@@ -1,53 +1,56 @@
-.priority-projects {
-  background-color: #b1fae080;
-  margin-top: 100px;
+.page-grid {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
+}
+
+
+.priority-card {
+  grid-column: 1;
+  grid-row: 1;
   margin: 20px;
-  margin-left: 230px;
-  border-radius: 4%;
+  margin-left:35vh;
+  background-color: #b1fae080;
+  height: 40vh;
+  width: 80vh;
+  border-radius: 10px;
+
+}
+.priority-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.d-text {
-  padding: 20px;
-
-}
-
-.view-projects {
+.view-card {
+  grid-column: 2;
+  grid-row: 1;
+  margin: 20px;
+  margin-left:35vh;
   background-color: #FDFDFD80;
-  margin-left: 230px;
-  margin-bottom: 100px;
-  margin-right: 667px;
-  border-radius: 4%;
+  height: 30vh;
+  width: 80vh;
+  border-radius: 10px;
 
 }
+.view-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
 
-.date-project {
+.schedule-card {
+  grid-column: 3;
+  grid-row: 1,2;
+  margin: 20px;
+  margin-right:35vh;
   background-color: #FDFDFD80;
-  margin-right: 230px;
-  margin-top: 20px;
+  height: 73vh;
+  width: 50vh;
+  border-radius: 10px;
 }
 
-.see-p {
-  margin-top: 84px;
-  width: 144px;
-  height: 30px;
-  margin-left: 400px;
-  color: #000000;
-
 }
-
-
-
-.icons {
-  margin-left: 488px;
-  margin-bottom: 10px;
-
-}
-
-.top-corner {
-  position:absolute;
-   top:0;
-   right: -48px;
-   margin-top: 100px;
-   border-radius: 4%;
-
+.schedule-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
