@@ -1,11 +1,11 @@
-<div class="container show-form py-3">
-  <h1>All of your unfinished projects</h1>
+<div class="container show-form w-75 py-3 index">
+  <h1>Unfinished Projects</h1>
 
   <ul>
     <% @projects.each do |project| %>
       <li class="d-flex w-100 justify-content-around">
-        <p class="text-1 my-4 w-25"><%= project.name %></p>
-        <div class="p-2 align-self-center">
+        <p class="text-4 my-4 w-25"><%= project.name %></p>
+        <div class="p-2 align-self-center d-flex justify-content-around w-25">
           <%= link_to "View",  project_path(project.id), class:"button-1 my-auto"%>
           <%= link_to "Delete",
                       project_path(project.id),
