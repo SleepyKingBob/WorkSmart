@@ -6,17 +6,18 @@ class PagesController < ApplicationController
   end
 
   def dashboard
-    @prioritised_projects = @user.projects.sort_by { |project| project[:dead_line] }
+    @unfinished_projects = @user.projects.where(completed: false)
+    @prioritised_projects = @unfinished_projects.sort_by { |project| project[:dead_line] }
     @active_project = @user.projects.find { |project| project[:active] == true }
     if @prioritised_projects.nil? || @prioritised_projects.empty?
       @prioritised_project_completed = []
     else
       @prioritised_project_completed = @prioritised_projects.first.tasks.where(completed: true)
     end
-    if @active_projects.nil?
+    if @active_project.nil?
       @active_project_completed = []
     else
-      @active_project_completed = @active_projects.tasks.where(completed: true)
+      @active_project_completed = @active_project.tasks.where(completed: true)
     end
     if @prioritised_project_completed == []
       @prioritised_project_percentage = 0

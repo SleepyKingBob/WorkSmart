@@ -8,8 +8,10 @@
       <p>Hours expected to complete this project: <%= @project.expected_hours %></p>
       <p>Hours spent on project: <%= @project.hours_worked %>/<%= @project.expected_hours %></p>
       <p><%= @percentage %>% completed</p>
-      <% unless @project.active %>
-      <%= link_to "Mark as Active", project_active_path(@project.id), class:"button-1 my-auto" %>
+      <% if @project.active %>
+        <%= link_to "Unmark as Active", project_unmark_active_path(@project.id), class:"button-1 my-auto"%>
+      <% else %>
+        <%= link_to "Mark as Active", project_active_path(@project.id), class:"button-1 my-auto" %>
       <% end %>
     </div>
 
@@ -48,4 +50,7 @@
       <%= link_to "+ Add a Task", new_project_task_path(@project.id), class:"button-1"%>
     </div>
   </div>
+  <% unless @project.completed %>
+    <%= link_to "Mark as Completed", project_complete_path(@project.id), class:"button-1 my-auto" %>
+  <% end %>
 </div>
