@@ -1,26 +1,54 @@
 <div data-start-target="change">
-  <div>
-    <%= render "schedules/edit_form", user: user %>
-  </div>
-  <div class="text-center m-3">
-    <h2 class="text-6 text-center pt-3 "><%= Date.today.strftime("%d-%m-%Y") %></h2>
-    <br/>
-    <% if user.schedule == nil %>
-      <p class="text-2">You don't have any schedule yet</p>
-    <% else %>
-      <% start_time = user.schedule.start_time %>
-      <% lunch_break = user.break_time %>
-      <% lunch_break_time = Time.parse("#{lunch_break}:00") %>
-      <% received_end_time = user.work_hours %>
-      <% end_time_duration = received_end_time.hours %>
-      <% end_time = start_time + end_time_duration %>
-      <ul>
-        <li class="text-2" >Start Time: <%= start_time.strftime("%H:%M") %></li>
+    <div>
+      <%= render "schedules/edit_form", user: user %>
+    </div>
+
+    <div class= "" >
+      <div class="m-3">
+        <h2 class="text-2 text-center pt-3"><%= Date.today.strftime("%d-%m-%Y") %></h2>
         <br/>
-        <%# <li class="text-2">Lunch Break: <%= lunch_break_time.strftime('%H:%M') %><%#</li> %>
-        <br/>
-        <li class="text-2 pb-3">End Time: <%= end_time.strftime("%H:%M")  %></li>
-      </ul>
-    <% end %>
+
+        <% if user.schedule == nil %>
+          <p class="text-2">You don't have any schedule yet</p>
+        <% else %>
+
+          <% start_time = user.schedule.start_time %>
+          <% lunch_break = user.schedule.lunch_break %>
+
+          <% received_end_time = user.work_hours %>
+          <% end_time_duration = received_end_time.hours %>
+          <% end_time = start_time + end_time_duration %>
+
+          <% mid_time1 = start_time + (lunch_break - start_time) / 2 %>
+          <% mid_time2 = lunch_break + (end_time - lunch_break) / 2 %>
+          <% mid_time3 = start_time + (end_time - start_time) / 2 %>
+          <% mid_time4 = start_time + (mid_time3 - start_time) / 2 %>
+          <% mid_time5 = mid_time3 + (end_time - mid_time3) / 2 %>
+
+          <ul>
+            <li class="text-2" >Start Time: <%= start_time.strftime("%H:%M") %></li>
+            <br/>
+            <% if (start_time.strftime("%H:%M") < lunch_break.strftime('%H:%M')) && (lunch_break.strftime('%H:%M') > end_time.strftime("%H:%M")) %>
+              <li class="text-2">Break: <%= mid_time1.strftime('%H:%M') %></li>
+              <br/>
+              <li class="text-2">Lunch Break: <%= lunch_break.strftime('%H:%M') %></li>
+              <br/>
+              <li class="text-2">Break: <%= mid_time2.strftime('%H:%M') %></li>
+              <br/>
+              <% else %>
+              <li class="text-2">Break: <%= mid_time4.strftime('%H:%M') %></li>
+              <br/>
+              <li class="text-2">Break: <%= mid_time3.strftime('%H:%M') %></li>
+              <br/>
+              <li class="text-2">Break: <%= mid_time5.strftime('%H:%M') %></li>
+              <br/>
+            <% end %>
+            <li class="text-2 pb-3">End Time: <%= end_time.strftime("%H:%M")  %></li>
+          </ul>
+
+        <% end %>
+        <%= link_to "Create schedule", new_schedule_path, class:"d-flex justify-content-center fixed-bottom pb-2" %>
+
+      </div>
+    </div>
   </div>
-</div>
