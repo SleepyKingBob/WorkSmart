@@ -79,3 +79,11 @@ end
 
 #ADDED
 gem "devise"
+
+
+#Google Calendar
+gem 'omniauth-google-oauth2'
+gem 'dotenv-rails', groups: [:development, :test]
+gem 'omniauth-rails_csrf_protection', '~> 1.0'
+
+gem "google-api-client", "~> 0.44.2"

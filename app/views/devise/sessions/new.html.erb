@@ -21,6 +21,8 @@
       <br/>
       <li class="d-flex justify-content-center"><%= f.submit  "Log in", class:"button-1 border-0 w-100 d-flex justify-content-center" %></li>
       <br/>
+      <li><%= button_to  'Login with Google', user_google_oauth2_omniauth_authorize_path, method: :post, :data => {turbo: "false"} %></li>
+      <br/>
       <li class="d-flex justify-content-center"><%= render "devise/shared/links" %></li>
       </ul>
     </div>
