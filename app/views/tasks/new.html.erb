@@ -1,5 +1,5 @@
-<div class="container">
-  <h1>Add a task to <%= @project.name %></h1>
+<div class="container show-form p-3 pb-5">
+  <h1 class="des-task text-2">Add Your Task <%= @project.name %></h1>
 
   <ul>
     <% unless @project.tasks == []  %>
@@ -11,5 +11,5 @@
 
   <%= render "form", project: @project, task: @task %>
 
-  <%= link_to "Back to dashboard", dashboard_path %>
+  <%= link_to "Back to dashboard", dashboard_path, class:"button-1" %>
 </div>

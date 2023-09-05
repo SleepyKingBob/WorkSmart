@@ -1,0 +1,146 @@
+.login {
+  padding-left: 50%;
+  margin-top: 30px;
+}
+
+.sign-upbutton{
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  border: 2px solid #4CAF4F;
+  border-radius: 25px;
+
+}
+
+.des-task {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.rem-text {
+  margin-left: 85px;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 10px;
+
+}
+
+
+.button-login {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  padding: 8px 28px;
+  border-radius: 25px;
+  margin-top: 10px;
+  border: 2px solid #4CAF4F;
+  color: #4CAF4F;
+  margin-left: 40px;
+}
+.button-login:hover {
+  background: #4CAF4F;
+  border: 2px solid #4CAF4F;
+  color: #ebedeb;
+}
+
+.sign-text {
+  margin-top: 10px;
+}
+
+.wrapper {
+	margin-top: 20px;
+  margin-bottom: 100px;
+  display: flex;
+  justify-content: center;
+  margin-top: 25vh;
+  align-items: center;
+  position: fixed;
+  width: 100vw;
+  height: 30vh;
+  z-index:1000;
+}
+
+.form-signin {
+  max-width: 380px;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid rgba(0,0,0,0.1);
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.form-control {
+	position: relative;
+	font-size: 16px;
+	height: auto;
+	padding: 10px;
+	}
+.sign-link {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  padding: 8px 28px;
+  border-radius: 25px;
+  border: 2px solid #4CAF4F;
+  color: #4CAF4F;
+}
+.sign-link:hover {
+  background: #b1e1b3;
+  border: 2px solid #4CAF4F;
+  color: #ebedeb;
+}
+.button-login2 {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  padding: 8px 28px;
+  border-radius: 25px;
+  border: 2px solid #4CAF4F;
+  color: #4CAF4F;
+  margin-left: 14px;
+  margin-bottom: 10px;
+}
+.button-login2:hover {
+  background: #b1e1b3;
+  border: 2px solid #4CAF4F;
+  color: #ebedeb;
+}
+
+.next-button {
+margin-left: 111px;
+font-family: "Montserrat", sans-serif;
+text-transform: uppercase;
+font-weight: 500;
+font-size: 16px;
+letter-spacing: 1px;
+padding: 8px 28px;
+border-radius: 25px;
+// margin-top: 10px;
+border: 2px solid #4CAF4F;
+color: #4CAF4F;
+margin-left: 30px;
+}
+
+.next-button:hover {
+  background: #4CAF4F;
+  border: 2px solid #4CAF4F;
+  color: #ebedeb;
+}
+
+li {
+  list-style-type: none;
+}
+
+.form-n2 {
+  margin-top: 10px;
+}
