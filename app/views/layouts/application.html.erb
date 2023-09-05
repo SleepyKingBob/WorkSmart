@@ -35,7 +35,7 @@
 
 
 
-  <body class="background-pages <%= "max-vh-100 overflow-hidden" unless current_page?(root_path) %>">
+  <body class="background-pages <%= "max-vh-100 overflow-hidden" unless current_page?(root_path) || current_page?(calendar_path) %>">
     <div data-controller="start">
 
       <div data-controller="sidebar">
