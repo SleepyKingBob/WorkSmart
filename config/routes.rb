@@ -15,7 +15,7 @@ Rails.application.routes.draw do
     get "unmark", to: "projects#unmark_active", as: "unmark_active"
     get "complete", to: "projects#complete", as: "complete"
     get "incomplete", to: "projects#incomplete", as: "incomplete"
-    
+
     resources "tasks", only: %i[new create update destroy]
   end
 
@@ -23,8 +23,6 @@ Rails.application.routes.draw do
 
   resources "schedules", only: %i[index new show create edit update destroy]
   resources "notifications", only: %i[destroy]
-
-
 
   # Defines the root path route ("/")
   # root "articles#index"

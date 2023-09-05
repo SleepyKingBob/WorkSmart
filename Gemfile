@@ -91,4 +91,4 @@ gem "simple_calendar", "~> 2.4"
 
 
 # Calendar
-gem "google-api-client", "~> 0.44.2"
+# gem "google-api-client", "~> 0.44.2"
