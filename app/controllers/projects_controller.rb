@@ -1,6 +1,6 @@
 class ProjectsController < ApplicationController
   before_action :set_project, only: %i[show destroy]
-  before_action :set_project_id, only: %i[set_active unmark_active complete]
+  before_action :set_project_id, only: %i[set_active unmark_active complete incomplete]
 
   
   def show
@@ -59,6 +59,10 @@ class ProjectsController < ApplicationController
     redirect_to completed_projects_path
   end
 
+  def incomplete
+    @project.update_attribute(:completed, false)
+    redirect_to projects_path
+  end
 
   private
 
