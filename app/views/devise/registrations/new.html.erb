@@ -1,65 +1,76 @@
-
 <div data-controller="create-user">
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <div class="form-box" data-create-user-target="first">
-    <div class= "back-g">
-      <p class="text-1 text-center ">Create account</p>
-      <br/>
-        <ul>
-          <li><%= f.email_field :email, placeholder: "Email", class:"fields-1",
+    <div class="wrapper" data-create-user-target="first" >
+      <div class="form-signin" >
+        <h2 class= "sign-text text-1 text-center">Create account</h2>
+        <br/>
+          <ul>
+            <i class="fa-regular fa-envelope"></i>
+            <li><%= f.email_field :email, placeholder: "Email", class:"form-control",
+
                       required: true,
                       autofocus: true,
                       input_html: {  autocomplete: "email" }%></li>
-          <br/>
-          <li><%= f.password_field :password, placeholder: "Password", class:"fields-1",
-                      required: true,
-                      hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                      input_html: { autocomplete: "new-password" } %></li>
-          <br/>
-          <li><%= f.password_field :password_confirmation, placeholder: "Password confirmation", class:"fields-1",
-                      required: true,
-                      input_html: { autocomplete: "new-password" } %></li>
-          <br/>
-          <li><i class="button-1 d-flex justify-content-center" data-action="click->create-user#displayForm">Next step</i></li>
-          <br/>
-          <li><%= link_to "If you already have a account click here !", user_session_path, class:"d-flex justify-content-center"  %></li>
-        </ul>
+            <br/>
+            <i class="fa-solid fa-lock"></i>
+            <li><%= f.password_field :password, placeholder: "Password", class:"form-control",
+                        required: true,
+                        hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                        input_html: { autocomplete: "new-password" } %></li>
+            <br/>
+            <i class="fa-solid fa-lock"></i>
+            <li><%= f.password_field :password_confirmation, placeholder: "Password confirmation", class:"form-control",
+                        required: true,
+                        input_html: { autocomplete: "new-password" }%></li>
+            <br/>
+            <br/>
+            <%# <li><i class="button-login" data-action="click->create-user#displayForm">Next Step</i></li> %>
+            <button class ="next-button " data-action="click->create-user#displayForm">Next Step </button>
+
+
+          </ul>
+          <p class= "d-flex justify-content-center mt-3"> OR </p>
+          <%= link_to "Log in", new_session_path(resource_name),class:" d-flex justify-content-center button-login2"  %>
       </div>
-  </div>
+    </div>
 
-  <%# next form %>
+<%# next form %>
 
-
-  <div class="form-box invisible" data-create-user-target="second" >
-      <div>
-        <p class="text-1 center-text">Create Account</p>
+    <div class="wrappe invisible form-n2 " data-create-user-target="second" >
+      <div class="form-signin">
+        <p class=" sign-text text-1 center-text">Add details</p>
         <br/>
         <ul>
-          <li><%= f.text_field :first_name, placeholder: "First name", class:"fields-1",
+          <i class="fa-solid fa-file-signature"></i>
+          <li><%= f.text_field :first_name, placeholder: "First name", class:"form-control ",
                       required: true,
                       autofocus: true,
                       input_html: { autocomplete: "email" }%></li>
           <br/>
-          <li><%= f.text_field :last_name, placeholder: "Last name", class:"fields-1",
+          <i class="fa-solid fa-file-signature"></i>
+          <li><%= f.text_field :last_name, placeholder: "Last name", class:"form-control",
                       required: true,
                       input_html: { autocomplete: "Last name" } %></li>
           <br/>
-          <li><%= f.number_field :work_hours, placeholder: "How many hours you work per day?", class:"fields-1",
+
+          <i class="fa-regular fa-hourglass"></i>
+          <li><%= f.number_field :work_hours, placeholder: "How many hours you work per day?", class:"fields-1 form-control",
                       required: true,
                       input_html: { autocomplete: "Work hours" } %></li>
           <br/>
-           <li><%= f.number_field :break_time, placeholder: "what is your lunch time?", class:"fields-1",
+          <i class="fa-brands fa-uncharted"></i>
+            <li><%= f.number_field :break_time, placeholder: "what is your lunch time?", class:"fields-1 form-control",
                       required: true,
                       input_html: { autocomplete: "Lunch break" } %></li>
           <br/>
-          <%= f.submit "Sign up", class:"button-1 border-0 w-100 d-flex justify-content-center" %>
+          <li class="d-flex "><%= f.submit  "Log in", class:" d-flex justify-content-center sign-link"%></li>
           <br/>
-          <li><a class="d-flex justify-content-center" data-action="click->create-user#displayForm">Back to the first step</a><li>
 
-          <li><%= link_to "If you already have a account click here !", user_session_path, class:"d-flex justify-content-center"  %></li>
+          <li class= ><a class="d-flex justify-content-center" data-action="click->create-user#displayForm">Back to the first step</a><li>
+          <li><%= link_to "Do have a account click here !", user_session_path, class:"d-flex justify-content-center" %></li>
           <br/>
-         </ul>
+        </ul>
       </div>
-  </div>
+    </div>
   <% end %>
 </div>

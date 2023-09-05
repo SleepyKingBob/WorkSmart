@@ -7,8 +7,12 @@ Rails.application.routes.draw do
 
   root to: "pages#home"
   get "dashboard", to: "pages#dashboard"
+
+  get "settings", to: "pages#settings"
+
   get "projects/completed", to: "projects#index_complete", as: "completed_projects"
   get "calendar", to: "pages#calendar", as: "calendar"
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   resources "projects" do
     get "active", to: "projects#set_active", as: "active"
