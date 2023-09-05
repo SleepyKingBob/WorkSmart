@@ -1,0 +1,8 @@
+<div class="card notification">
+  <p>Test Notification</p>
+  <%= link_to "Delete",
+            notification_path(current_user.notification.id),
+            data: {turbo_method: :delete, turbo_confirm: "Are you sure?"},
+            class:"my-auto button-2"
+%>
+</div>

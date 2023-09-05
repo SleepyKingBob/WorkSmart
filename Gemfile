@@ -79,3 +79,5 @@ end
 
 #ADDED
 gem "devise"
+gem "sidekiq"
+gem "sidekiq-failures", "~> 1.0"

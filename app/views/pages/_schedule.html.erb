@@ -27,17 +27,17 @@
           <% mid_time5 = mid_time3 + (end_time - mid_time3) / 2 %>
 
           <ul>
-            <li class="text-2" >Start Time: <%= start_time.strftime("%H:%M") %></li>
+            <li data-start-target="startTime" class="text-2" >Start Time: <%= start_time.strftime("%H:%M") %></li>
             <br/>
             <% if (start_time.strftime("%H:%M") < lunch_break.strftime('%H:%M')) && (lunch_break.strftime('%H:%M') > end_time.strftime("%H:%M")) %>
-              <li class="text-2">Break: <%= mid_time1.strftime('%H:%M') %></li>
+              <li data-start-target="firstBreak" class="text-2">Break: <%= mid_time1.strftime('%H:%M') %></li>
               <br/>
               <li class="text-2">Lunch Break: <%= lunch_break.strftime('%H:%M') %></li>
               <br/>
               <li class="text-2">Break: <%= mid_time2.strftime('%H:%M') %></li>
               <br/>
               <% else %>
-              <li class="text-2">Break: <%= mid_time4.strftime('%H:%M') %></li>
+              <li data-start-target="firstBreak" class="text-2">Break: <%= mid_time4.strftime('%H:%M') %></li>
               <br/>
               <li class="text-2">Break: <%= mid_time3.strftime('%H:%M') %></li>
               <br/>

@@ -16,6 +16,7 @@ class SchedulesController < ApplicationController
     @schedule = Schedule.new(schedule_params)
     @schedule.user = current_user
     if @schedule.save
+      # set_notification
       redirect_to dashboard_path, notice: "schedule was successfully created!"
     else
       render :new, status: :unprocessable_entity
@@ -28,6 +29,7 @@ class SchedulesController < ApplicationController
     @schedule.update(update_schedule_params)
 
     if @schedule.save
+      # set_notification
       respond_to do |format|
         format.html { redirect_to dashboard_path }
         format.text { render partial: "pages/schedule", locals: { user: current_user }, formats: [:html] }
@@ -54,5 +56,9 @@ class SchedulesController < ApplicationController
 
   def update_schedule_params
     params.require(:schedule).permit(:start_time, :end_time, :lunch_break)
+  end
+
+  def set_notification
+    NotificationJob.set(wait_until: (Time.now + 10.seconds)).perform_later(current_user)
   end
 end
