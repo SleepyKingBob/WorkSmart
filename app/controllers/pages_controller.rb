@@ -37,7 +37,6 @@ class PagesController < ApplicationController
     end
   end
 
-
   def settings; end
 
 private
