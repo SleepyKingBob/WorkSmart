@@ -5,23 +5,39 @@
 // input and has no visual effect. Here we try to fix matters by
 // applying the clear to the div wrapping the first following radio button
 // or checkbox.
-legend ~ div.form-check:first-of-type {
-  clear: left;
-}
+// legend ~ div.form-check:first-of-type {
+//   clear: left;
+// }
 
 .form-box{
-  display: flex;
-  justify-content: center;
-  margin-top: 20vh;
-  align-items: center;
-  position: fixed;
-  width: 100vw;
-  height: 30vh;
-  z-index:1000;
+  // display: flex;
+  // justify-content: center;
+  // margin-top: 20vh;
+  // align-items: center;
+  // position: fixed;
+  // width: 100vw;
+  // height: 30vh;
+  // z-index:1000;
+  // margin-top: 24px;
+  // margin-bottom: 100px;
 }
 
-.fields-1{
-  display: flex;
-  justify-content: center;
-  width: 320px;
+// .fields-1{
+//   display: flex;
+//   justify-content: center;
+//   width: 320px;
+// }
+
+.create-b{
+margin-bottom: 20px;
+border-radius: 25px;
+transition: 0.5s;
+margin-top: 10px;
+border: 2px solid #4CAF4F;
+color: #4CAF4F
 }
+
+// .create-b:hover {
+//   background: white;
+//   border: 2px solid #4CAF4F;
+// }

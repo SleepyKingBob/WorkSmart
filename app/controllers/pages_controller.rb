@@ -30,7 +30,9 @@ class PagesController < ApplicationController
     end
   end
 
-  private
+  def settings; end
+
+private
 
   def set_user
     @user = current_user

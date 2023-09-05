@@ -1,20 +1,22 @@
 
 <div class="container show-form p-3 pb-5">
   <div class="d-flex justify-content-around">
-    <div class="my-3">
-      <h1><%= @project.name %></h1>
-      <p>Date Started: <%= @project.start_date %></p>
-      <p>Project deadline: <%= @project.dead_line %></p>
-      <p>Hours expected to complete this project: <%= @project.expected_hours %></p>
-      <p>Hours spent on project: <%= @project.hours_worked %>/<%= @project.expected_hours %></p>
-      <p><%= @percentage %>% completed</p>
+    <div class="my-3 des-proj">
+      <h1 class= "text-2"><%= @project.name %></h1>
+      <div class= "li-des">
+      <p> <i class="fa-solid fa-calendar-days"></i> Date Started: <%= @project.start_date %></p>
+      <p> <i class="fa-solid fa-hourglass-end"></i> Project deadline: <%= @project.dead_line %></p>
+      <p> <i class="fa-solid fa-clock"></i> Hours expected to complete this project: <%= @project.expected_hours %></p>
+      <p> <i class="fa-solid fa-comments-dollar"></i> Hours spent on project: <%= @project.hours_worked %>/<%= @project.expected_hours %></p>
+      <p> <i class="fa-solid fa-square-check"></i><%= @percentage %>% completed</p>
       <% unless @project.active %>
       <%= link_to "Mark as Active", project_active_path(@project.id), class:"button-1 my-auto" %>
       <% end %>
     </div>
+  </div>
 
-    <div class="my-4">
-      <h2>Tasks</h2>
+    <div class="my-4 des-proj">
+      <h1 class= "text-2">Tasks</h1>
       <ul>
       <% @tasks.each do |task| %>
         <% if task.completed %>
