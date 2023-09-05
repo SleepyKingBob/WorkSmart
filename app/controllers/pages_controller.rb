@@ -1,9 +1,16 @@
 class PagesController < ApplicationController
   before_action :set_user, only: %I[dashboard]
-
+  before_action :set_project, only: %i[calendar]
   def home
     redirect_to dashboard_path if !current_user.nil? && !current_user.first_name.nil?
   end
+
+  def calendar
+    start_date = params.fetch(:start_date, Date.today).to_date
+    @projects = Project.where(start_date: start_date.beginning_of_month.beginning_of_week..start_date.end_of_month.end_of_week)
+  end
+
+
 
   def dashboard
     @unfinished_projects = @user.projects.where(completed: false)
@@ -31,9 +38,15 @@ class PagesController < ApplicationController
     end
   end
 
+
   private
 
   def set_user
     @user = current_user
   end
+
+  def set_project
+    @project = Project.all
+  end
+
 end

@@ -282,6 +282,8 @@ GEM
       faraday (>= 0.17.5, < 3.a)
       jwt (>= 1.5, < 3.0)
       multi_json (~> 1.10)
+    simple_calendar (2.4.3)
+      rails (>= 3.0)
     snaky_hash (2.0.1)
       hashie
       version_gem (~> 1.1, >= 1.1.1)
@@ -349,6 +351,7 @@ DEPENDENCIES
   rails (~> 7.0.7, >= 7.0.7.2)
   sassc-rails
   selenium-webdriver
+  simple_calendar (~> 2.4)
   simple_form!
   sprockets-rails
   stimulus-rails
