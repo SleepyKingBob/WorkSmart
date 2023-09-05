@@ -10,14 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema[7.0].define(version: 2023_09_05_090940) do
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "notifications", force: :cascade do |t|
+    t.string "content"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_notifications_on_user_id"
+  end
+
   create_table "projects", force: :cascade do |t|
     t.string "name"
-    t.date "start_date"
-    t.date "dead_line"
+    t.datetime "start_date"
+    t.datetime "dead_line"
     t.integer "hours_worked", default: 0
     t.integer "expected_hours"
     t.bigint "user_id", null: false
@@ -57,13 +67,19 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_05_090940) do
     t.datetime "updated_at", null: false
     t.string "first_name"
     t.string "last_name"
-    t.integer "work_hours"
     t.string "projects_for_week"
+    t.integer "work_hours"
     t.integer "break_time"
+    t.string "provider"
+    t.string "uid"
+    t.string "access_token"
+    t.integer "expires_at"
+    t.string "refresh_token"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "notifications", "users"
   add_foreign_key "projects", "users"
   add_foreign_key "schedules", "users"
   add_foreign_key "tasks", "projects"

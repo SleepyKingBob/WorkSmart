@@ -1,6 +1,8 @@
 class ProjectsController < ApplicationController
   before_action :set_project, only: %i[show destroy]
+  before_action :set_project_id, only: %i[set_active unmark_active complete incomplete]
 
+  
   def show
     @tasks = @project.tasks.sort_by { |task| task[:id] }
     @completed_tasks = @project.tasks.where(completed: true)
@@ -13,6 +15,10 @@ class ProjectsController < ApplicationController
 
   def index
     @projects = current_user.projects.where(completed: false)
+  end
+
+  def index_complete
+    @projects = current_user.projects.where(completed: true)
   end
 
   def new
@@ -39,17 +45,34 @@ class ProjectsController < ApplicationController
     @projects.each do |project|
       project.update_attribute(:active, false)
     end
-    @project = Project.find(params[:project_id])
     @project.update_attribute(:active, true)
     redirect_to dashboard_path
   end
 
- 
+  def unmark_active
+    @project.update_attribute(:active, false)
+    redirect_to dashboard_path
+  end
+
+  def complete
+    @project.update_attribute(:completed, true)
+    redirect_to completed_projects_path
+  end
+
+  def incomplete
+    @project.update_attribute(:completed, false)
+    redirect_to projects_path
+  end
+
 
   private
 
   def set_project
     @project = Project.find(params[:id])
+  end
+
+  def set_project_id
+    @project = Project.find(params[:project_id])
   end
 
   def project_params

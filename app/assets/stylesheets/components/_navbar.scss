@@ -2,6 +2,13 @@ header {
   min-height: 80px;
   display: flex;
   background-color: #FFFFFF;
+  opacity: 80%;
+}
+
+.logo {
+ height: 3rem;
+ width: 20rem;
+
 }
 
 .menu {
@@ -60,7 +67,7 @@ header {
 }
 
 
-.nabar-button-start {
+.navbar-button-start {
   font-family: Montserrat, sans-serif;
   text-transform: uppercase;
   font-weight: 500;
@@ -71,12 +78,12 @@ header {
   color: rgb(76, 175, 79);
   padding: 8px 28px;
   border-radius: 25px;
-  border-width: 2px;
+  border-width: 0.5px;
   border-color: rgb(76, 175, 79);
   margin-bottom: 10px;
 }
 
-.nabar-button-start:hover {
+.navbar-button-start:hover {
   background: white;
   border: 2px solid #4CAF4F;
 }
@@ -96,8 +103,8 @@ header {
 .l-r-space {
   margin-right: 20px;
   margin-top: 21px;
-}
 
+}
 
 .menu {
   margin-top: 40px;
@@ -106,6 +113,18 @@ header {
 
 .notify-icon {
   margin-top: 20px;
+  height: 3rem;
+  width: 8rem;
+}
+
+
+@media (max-width: 600px) {
+  .logo {
+    height: 3rem;
+    width: 10rem;
+
+   }
+
 }
 
 .icon-7 {

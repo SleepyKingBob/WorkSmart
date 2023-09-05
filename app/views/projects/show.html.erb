@@ -11,6 +11,7 @@
       <p> <i class="fa-solid fa-square-check"></i><%= @percentage %>% completed</p>
       <% unless @project.active %>
       <%= link_to "Mark as Active", project_active_path(@project.id), class:"button-1 my-auto" %>
+
       <% end %>
     </div>
   </div>
@@ -50,4 +51,9 @@
       <%= link_to "+ Add a Task", new_project_task_path(@project.id), class:"button-1"%>
     </div>
   </div>
+  <% if @project.completed %>
+    <%= link_to "Mark as Incomplete", project_incomplete_path(@project.id), class:"button-1 my-auto" %>
+  <% else %>
+    <%= link_to "Mark as Completed", project_complete_path(@project.id), class:"button-1 my-auto" %>
+  <% end %>
 </div>

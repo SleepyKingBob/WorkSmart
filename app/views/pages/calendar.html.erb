@@ -1,0 +1,23 @@
+<div class="scrollable-table">
+  <% if @projects.any? %>
+    <div class="container mt-5 text-center">
+      <%= month_calendar(event: @projects) do |date| %>
+        <div class="day">
+          <%= date.day  %>
+        </div>
+        <% @projects.each do |project| %>
+          <% if (project.start_date..project.dead_line).cover?(date)%>
+            <div class="card-header">
+              <div class="card-title">
+                <li><%=  link_to project.name, project  %></li>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+      <% end %>
+    </div>
+  <% else %>
+    <p>No projects found for this period.</p>
+    <%= link_to "Calendar", calendar_path  %>
+  <% end %>
+</div>
