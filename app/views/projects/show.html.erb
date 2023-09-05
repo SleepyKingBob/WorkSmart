@@ -6,7 +6,7 @@
       <p>Date Started: <%= @project.start_date %></p>
       <p>Project deadline: <%= @project.dead_line %></p>
       <p>Hours expected to complete this project: <%= @project.expected_hours %></p>
-      <p>Hours spent on project: <%= @project.hours_worked %>/<%= @project.expected_hours %></p>
+      <p>Hours spent on project: <%= @project.hours_worked.round(1) %>/<%= @project.expected_hours %></p>
       <p><%= @percentage %>% completed</p>
       <% if @project.active %>
         <%= link_to "Unmark as Active", project_unmark_active_path(@project.id), class:"button-1 my-auto"%>

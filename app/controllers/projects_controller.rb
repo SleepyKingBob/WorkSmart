@@ -2,7 +2,7 @@ class ProjectsController < ApplicationController
   before_action :set_project, only: %i[show destroy]
   before_action :set_project_id, only: %i[set_active unmark_active complete incomplete]
 
-  
+
   def show
     @tasks = @project.tasks.sort_by { |task| task[:id] }
     @completed_tasks = @project.tasks.where(completed: true)
@@ -46,11 +46,16 @@ class ProjectsController < ApplicationController
       project.update_attribute(:active, false)
     end
     @project.update_attribute(:active, true)
+    @project.update_attribute(:start_count, DateTime.now)
     redirect_to dashboard_path
   end
 
   def unmark_active
     @project.update_attribute(:active, false)
+    @project.update_attribute(:end_count, DateTime.now)
+    hours = (((@project.end_count - @project.start_count) / 60) / 60)
+    @project.hours_worked = @project.hours_worked + hours
+    @project.save
     redirect_to dashboard_path
   end
 
