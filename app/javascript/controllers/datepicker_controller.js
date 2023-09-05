@@ -5,7 +5,7 @@ export default class extends Controller {
   connect() {
     flatpickr(this.element,
     {
-      dateFormat: "d/m/Y",
+       dateFormat: "D, d M Y",
     })
     flatpickr(".expected_hours",
       {
