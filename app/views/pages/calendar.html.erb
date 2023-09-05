@@ -6,7 +6,7 @@
           <%= date.day  %>
         </div>
         <% @projects.each do |project| %>
-          <% if (project.start_date..project.dead_line).cover?(date) %>
+          <% if (project.start_date..project.dead_line).cover?(date)%>
             <div class="card-header">
               <div class="card-title">
                 <li><%=  link_to project.name, project  %></li>
