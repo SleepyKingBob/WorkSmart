@@ -1,6 +1,6 @@
 <div class="page-grid" data-controller="schedule">
 
-    <% if @user.projects == [] %>
+    <% if @user.projects == [] || @prioritised_projects == []%>
       <div class="priority-card">
         <p class= text-2>You don't have any projects yet</p>
     <% elsif @active_project == nil %>
