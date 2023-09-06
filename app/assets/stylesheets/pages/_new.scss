@@ -38,10 +38,10 @@
   letter-spacing: 1px;
   padding: 8px 28px;
   border-radius: 25px;
-  margin-top: 10px;
+  margin-top: 30px;
   border: 2px solid #4CAF4F;
   color: #4CAF4F;
-  margin-left: 40px;
+  margin-left: 74px;
 }
 .button-login:hover {
   background: #4CAF4F;
@@ -53,7 +53,20 @@
   margin-top: 10px;
 }
 
-.wrapper {
+.wrapper-login {
+	margin-top: 20px;
+  margin-bottom: 100px;
+  display: flex;
+  justify-content: center;
+  margin-top: 25vh;
+  align-items: center;
+  position: fixed;
+  width: 100vw;
+  height: 30vh;
+  z-index:1000;
+}
+
+.wrapper-signup {
 	margin-top: 20px;
   margin-bottom: 100px;
   display: flex;
@@ -80,7 +93,32 @@
 	font-size: 16px;
 	height: auto;
 	padding: 10px;
+
 	}
+
+  .form-controlr {
+    position: relative;
+    font-size: 16px;
+    height: auto;
+    padding: 10px;
+    width:300px;
+    background-color: #f4f4f4;
+    isplay: block;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--bs-body-color);
+    appearance: none;
+    background-color: var(--bs-body-bg);
+    background-clip: padding-box;
+    padding: 0.375rem 0.75rem;
+    border: var(--bs-border-width) solid var(--bs-border-color);
+    border-radius: var(--bs-border-radius);
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+
+    }
+
 .sign-link {
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
@@ -117,7 +155,7 @@
 }
 
 .next-button {
-margin-left: 111px;
+
 font-family: "Montserrat", sans-serif;
 text-transform: uppercase;
 font-weight: 500;
@@ -125,10 +163,9 @@ font-size: 16px;
 letter-spacing: 1px;
 padding: 8px 28px;
 border-radius: 25px;
-// margin-top: 10px;
+margin-top: 10px;
 border: 2px solid #4CAF4F;
 color: #4CAF4F;
-margin-left: 30px;
 }
 
 .next-button:hover {
@@ -137,10 +174,14 @@ margin-left: 30px;
   color: #ebedeb;
 }
 
-li {
-  list-style-type: none;
-}
+
 
 .form-n2 {
   margin-top: 10px;
+}
+
+.frgt-pass {
+  background: transparent;
+  float: left;
+
 }
