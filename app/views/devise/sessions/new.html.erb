@@ -1,6 +1,6 @@
 
 <div class="wrapper-login ">
-    <div class="form-signin">
+    <div class="form-login">
         <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <h2 class="sign-text text-1  text-center">Please login</h2>
            <i class="fa fa-user-circle"></i>
@@ -19,12 +19,11 @@
           <li class="d-flex"><%= f.submit  "Log in", class:" d-flex justify-content-center button-login"%></li>
 
 
-          <!--Forgot Password button-->
+        <!--Forgot Password button-->
       <br>
       <div class="btn  frgt-pass" >
            <%= link_to "Forgot password?", new_password_path(resource_name)%>
       </div>
-
       <button class="btn submits sign-up">
           <!--Sign Up font icon -->
         <i class="fa fa-user-plus" aria-hidden="true"></i>

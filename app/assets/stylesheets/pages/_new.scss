@@ -64,6 +64,7 @@
   width: 100vw;
   height: 30vh;
   z-index:1000;
+
 }
 
 .wrapper-signup {
@@ -79,13 +80,37 @@
   z-index:1000;
 }
 
+.form-login {
+  max-width: 380px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  padding-left: 50px;
+  padding-right: 50px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
+}
 .form-signin {
+  max-width: 380px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-bottom: 200px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
+}
+
+.form-signin2 {
   max-width: 380px;
   margin: 0 auto;
   background-color: #fff;
   border: 1px solid rgba(0,0,0,0.1);
   padding-left: 50px;
   padding-right: 50px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
 }
 
 .form-control {
@@ -163,7 +188,7 @@ font-size: 16px;
 letter-spacing: 1px;
 padding: 8px 28px;
 border-radius: 25px;
-margin-top: 10px;
+margin-top: 20px;
 border: 2px solid #4CAF4F;
 color: #4CAF4F;
 }
@@ -176,12 +201,36 @@ color: #4CAF4F;
 
 
 
-.form-n2 {
-  margin-top: 10px;
+// .form-n2 {
+//   margin-top: 10px;
+// }
+
+.form-n3 {
+  margin-top: 86px;
 }
 
 .frgt-pass {
   background: transparent;
   float: left;
 
+}
+
+.fa-brands {
+  margin-top: 20px;
+}
+
+.fa-regular {
+  margin-top: 20px;
+}
+
+.fa-solid {
+  margin-top: 20px;
+}
+
+.fa-user-circle{
+  margin-top: 20px;
+}
+
+.fa-key {
+  margin-top: 20px;
 }

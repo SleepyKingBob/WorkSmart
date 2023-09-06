@@ -1,7 +1,7 @@
 <div data-controller="create-user">
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-    <div class="wrapper-signup" data-create-user-target="first" >
-      <div class="form-signin" >
+    <div class="wrapper-signup  " data-create-user-target="first" >
+      <div class="form-signin " >
         <h2 class= "sign-text text-1 text-center">Create account</h2>
             <i class="fa-regular fa-envelope"></i>
             <%= f.email_field :email, placeholder: "Email", class:"form-controlr",
@@ -32,8 +32,8 @@
 
 <%# next form %>
 
-    <div class="wrappe invisible form-n2 " data-create-user-target="second" >
-      <div class="d-flex justify-content-between">
+    <div class="invisible form-n3 " data-create-user-target="second" >
+      <div class="form-signin2">
         <p class=" sign-text text-1 center-text">Add details</p>
           <i class="fa-solid fa-file-signature"></i>
           <%= f.text_field :first_name, placeholder: "First name", class:"form-controlr",
@@ -47,7 +47,7 @@
                       input_html: { autocomplete: "Last name" } %>
 
           <i class="fa-regular fa-hourglass"></i>
-          <%= f.number_field :work_hours, placeholder: "How many hours you work per day?", class:"form-controlr",
+          <%= f.number_field :work_hours, placeholder: "How many hours you work per day", class:"form-controlr",
                       required: true,
                       input_html: { autocomplete: "Work hours" } %>
 
@@ -56,13 +56,14 @@
                       required: true,
                       input_html: { autocomplete: "Lunch break" } %>
 
-          <div class="d-flex "><%= f.submit  "Log in", class:" d-flex justify-content-center sign-link"%>
+                <!--Dashboard-->
 
-
-          <a class="d-flex justify-content-center" data-action="click->create-user#displayForm">Back to the first step</a>
-          <%= link_to "Do have a account click here !", user_session_path, class:"d-flex justify-content-center" %>
-          </div>
-
+              <br>
+            <div class= "d-flex justify-content-center">
+              <button class="btn submits sign-up">
+                <%= f.submit  "Dashborad", class:"next-button"%>
+              </button>
+            </div>
 
       </div>
     </div>
