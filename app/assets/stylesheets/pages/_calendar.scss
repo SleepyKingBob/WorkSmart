@@ -2,12 +2,23 @@
   width: 100%;
   border-collapse: collapse;
   border-spacing: 0;
-  border: 1px solid #ccc;
   font-size: 12px;
   font-family: Arial, sans-serif;
   color: #333;
-  background-color: #89cc9b;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   border-radius: 5px;
+
+}
+
+.scrollable-table {
+
+  margin-top: 8rem;
+
+}
+
+.calendar-page2 {
+  text-align: center;
+  margin-top: 10rem;
 
 }
 
@@ -17,9 +28,11 @@
   padding-right: 5px;
   display: flex;
   justify-content: space-between;
-  color:rgb(11, 121, 84);
+  color:rgb(22, 91, 68);
+  background-color: rgba(0, 128, 0, 0.40);
 
 }
+
 
 .calendar-heading a {
   text-decoration: none;

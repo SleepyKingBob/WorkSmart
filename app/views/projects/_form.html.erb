@@ -1,16 +1,16 @@
-<%= simple_form_for(project) do |f| %>
-  <%= f.input :name %>
-  <%= f.input :start_date,
-            as: :string,
-            input_html: { data: { controller: "datepicker" } } %>
-  <%= f.input :dead_line,
-            as: :string,
-            input_html: { data: { controller: "datepicker" } } %>
-  <%= f.input :expected_hours,
-          as: :string,
-          input_html: { data: { controller: "datepicker" }, class:"expected_hours" } %>
 
 
-  <%= f.submit class:"button-1 border-0 w-100 d-flex justify-content-center"%>
+  <%= simple_form_for(project) do |f| %>
+      <%= f.input :name %>
+      <%= f.input :start_date,
+                as: :string,
+                input_html: { data: { controller: "datepicker" } } %>
+      <%= f.input :dead_line,
+                as: :string,
+                input_html: { data: { controller: "datepicker" } } %>
+      <%= f.input :expected_hours,
+              as: :string,
+              input_html: { data: { controller: "datepicker" }, class:"expected_hours" } %>
+      <%= f.submit class:"button-1 border-0 w-100 d-flex justify-content-center"%>
 
-<% end %>
+  <% end %>

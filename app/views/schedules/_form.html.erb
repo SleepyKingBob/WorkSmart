@@ -1,16 +1,19 @@
-<div class="form-box ">
-  <%= form_for(schedule) do |f| %>
-    <h1>Add a Luch Break</h1>
-     <%= f.label :start_time %>
-     <%= f.time_field :start_time, placeholder: "Start Time", class:"fields-1 w-100" %>
-    <br/>
-    <%= f.label :lunch_break %>
-    <%= f.time_field :lunch_break, placeholder: "Lunch Break", class:"fields-1 w-100" %>
-    <br/>
-    <%= f.label :end_time %>
-    <%= f.time_field :end_time, placeholder: "End Time", class:"fields-1 w-100" %>
-    <br/>
-    <%= f.submit class:"button-1 border-0 w-100 d-flex justify-content-center" %>
 
-  <% end %>
-</div>
+  <div class="form-box-2 ">
+    <%= form_for(schedule) do |f| %>
+      <div class="create-schedule-card">
+        <h1>Create Schedule</h1>
+        <%= f.label :start_time %>
+        <%= f.time_field :start_time, placeholder: "Start Time", class:"create-field w-100" %>
+        <br/>
+        <%= f.label :lunch_break %>
+        <%= f.time_field :lunch_break, placeholder: "Lunch Break", class:"create-field w-100" %>
+        <br/>
+        <%= f.label :end_time %>
+        <%= f.time_field :end_time, placeholder: "End Time", class:"create-field w-100" %>
+        <br/>
+        <br/>
+        <%= f.submit class:"button-1 border-0 w-100 d-flex justify-content-center" %>
+      </div>
+    <% end %>
+  </div>
