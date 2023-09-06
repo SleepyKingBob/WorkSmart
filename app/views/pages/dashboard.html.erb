@@ -46,7 +46,9 @@
       <ul>
       <div class="pt-3">
         <% @unfinished_projects.first(4).each do |project| %>
-          <li class="text-4 text-position-2"> <%= project.name %></li>
+          <%= link_to project_path(project.id) do %>
+            <li class="text-4 text-position-2"> <%= project.name %></li>
+          <% end %>
         <% end %>
       <div>
       </ul>
