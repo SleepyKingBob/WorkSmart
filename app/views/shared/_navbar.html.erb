@@ -10,7 +10,12 @@
           <li><%= link_to "About us", root_path, class:"navbar-text1"  %></li>
           <li><%= link_to "Features", root_path, class:"navbar-text1"  %></li>
           <li><%= link_to "Log in", user_session_path, class:"nabar-button-login"  %></li>
-          <li><%= link_to "Register Now ", new_user_registration_path, class:"nabar-button"  %></li>
+          <li>
+            <div class="container-button-3">
+              <button class="button-3">
+              <span><%= link_to "Register Now ", new_user_registration_path  %></span></button>
+            </div>
+          </li>
         </ul>
       </div>
     </header>
@@ -27,8 +32,13 @@
 
       <div class="d-flex my-auto l-r-space ">
         <%= image_tag 'notify.png', class:"notify-icon" %>
-        <button class="navbar-button-start" data-action="click->start#updateSchedule">Start Work!</button>
+        <div class="container-button-3">
+          <button class="button-3" data-action="click->start#updateSchedule">
+          <span>Start Work!</span></button>
+        </div>
+
       </div>
     </header>
   </div>
+
 <% end %>
