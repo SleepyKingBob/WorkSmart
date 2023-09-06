@@ -1,8 +1,8 @@
 
-<div class="container show-form p-3 pb-5">
+<div class="container show-form p-3 pb-5 show-card">
   <div class="d-flex justify-content-around">
 
-    <div class="my-3 des-proj">
+    <div class="my-3 des-proj show-card-1">
       <h1 class= "text-2 text-center"><%= @project.name %></h1>
       <div class= "li-des">
       <p class="text-start"> <i class="fa-solid fa-calendar-days"></i> Date Started: <%= @project.start_date.strftime("%d %B %y") %></p>
@@ -10,10 +10,10 @@
       <p class="text-start"> <i class="fa-solid fa-clock"></i> Hours expected to complete this project: <%= @project.expected_hours %></p>
       <p class="text-start"> <i class="fa-solid fa-comments-dollar"></i> Hours spent on project: <%= @project.hours_worked.round(1) %>/<%= @project.expected_hours %></p>
       <p class="text-start"> <i class="fa-solid fa-square-check"></i><%= @percentage %>% completed</p>
+      </div>
     </div>
-  </div>
 
-    <div class="my-4 task-proj">
+    <div class="my-4 task-proj show-card-1">
       <h1 class= "text-2">Tasks</h1>
       <ul>
       <% @tasks.each do |task| %>
