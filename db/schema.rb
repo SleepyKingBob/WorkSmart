@@ -24,8 +24,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_05_142252) do
 
   create_table "projects", force: :cascade do |t|
     t.string "name"
-    t.date "start_date"
-    t.date "dead_line"
+    t.datetime "start_date"
+    t.datetime "dead_line"
     t.float "hours_worked", default: 0.0
     t.integer "expected_hours"
     t.bigint "user_id", null: false
@@ -67,8 +67,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_05_142252) do
     t.datetime "updated_at", null: false
     t.string "first_name"
     t.string "last_name"
-    t.string "projects_for_week"
     t.integer "work_hours"
+    t.string "projects_for_week"
     t.integer "break_time"
     t.string "provider"
     t.string "uid"
