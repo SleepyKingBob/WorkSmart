@@ -14,7 +14,9 @@
           <h1 class= "Green-text work-smart">WorkSmart</h1>
         </div>
         <p class="dash-text4">Deliver your best work with work-smart.me</p>
-        <button class="register-button">Register Now!</button>
+        <%= link_to new_user_registration_path do %>
+          <button class="register-button">Register Now!</button>
+        <% end %>
       </div>
       <div class="image">
         <%= image_tag 'home.png' %>
