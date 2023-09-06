@@ -10,16 +10,13 @@
       <div>
         <p class="text-5 pb-2 text-position-1"><%= @prioritised_projects.first.name %></p>
         <p class="text-4 pt-5 text-position-1"><%= @prioritised_project_percentage %>% completed</p>
-        <div class="progress">
-          <div class="progress-bar bg-success" role="progressbar" style="width: <%= @prioritised_project_percentage %>%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-        </div>
-        <%= link_to project_path(@prioritised_projects.first.id) do %>
-        <div class="see-project">
-          <p class= "text-3 pt-3 ">See all Projects</p>
-          <%= image_tag 'Icons.svg' %>
+        <div class="bar-size-position">
+          <div class="progress" >
+            <div class="progress-bar" role="progressbar" style="width: <%= @prioritised_project_percentage %>%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
         </div>
       </div>
-    <% end %>
+
     <% else %>
       <div class="new-box-1">
         <h2 class= "text-2 box-project">Active Project</h2>
@@ -27,16 +24,13 @@
       <div>
         <p class="text-5 pb-2 text-position-1"><%= @active_project.name %></p>
         <p class="text-4 pt-5 text-position-1"><%= @active_project_percentage %>% completed</p>
-        <div class="progress">
-          <div class="progress-bar bg-success" role="progressbar" style="width: <%= @active_project_percentage %>%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-        </div>
-        <%= link_to project_path(@active_project.id) do %>
-        <div class="see-project">
-          <p class= "text-3 pt-3 ">See more details</p>
-          <%= image_tag 'Icons.svg', class:"icon-procjet" %>
+        <div class="bar-size-position">
+          <div class="progress" >
+            <div class="progress-bar" role="progressbar" style="width: <%= @prioritised_project_percentage %>%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
         </div>
       </div>
-    <% end %>
+
     <% end %>
   </div>
 
@@ -70,5 +64,6 @@
   <%# --------- SCHEDULE ---------- %>
   <div class="schedule-card ">
     <%= render "pages/schedule", user: current_user %>
+    <%= link_to "Create schedule", new_schedule_path, class:"create" %>
   </div>
 </div>
