@@ -1,7 +1,9 @@
 .show-form {
   background-color: #FDFDFD80;
-  margin-top: 40px;
+  margin-top: 10rem;
   text-align: center;
+  border-radius: 3px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 .des-proj {
@@ -13,6 +15,13 @@
   display: inline-block;
   font-size: 20px;
   color: #286848;
+}
+
+
+.show-card-1 {
+  border-radius: 5px;
+  // border: 1px solid black;
+  padding: 32px;
 }
 
 .task-proj {
