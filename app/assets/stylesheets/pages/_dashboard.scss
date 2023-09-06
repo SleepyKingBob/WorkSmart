@@ -54,7 +54,7 @@
   grid-row: 1 / span 2;
   background-color: #ffffff;
   margin-top: 6.2rem;
-  height: 88%;
+  height: 89%;
   width: 100%;
   margin-bottom: 1%;
   border-radius: 0.5rem;
@@ -68,16 +68,30 @@
 .create{
     display: flex;
     justify-content: center;
-    position: relative;
+    position: absolute;
+    padding-left: 8.3rem;
 
   }
+.bar-size-position {
+  margin-left: 18.5rem;
+  width: 20rem;
+}
 
+.progress {
+  border-radius: 25px;
+}
+
+.progress-bar {
+  background-color: rgba(0, 128, 0, 0.70);;
+}
 
 .see-project {
   display:flex;
-  align-items: center;
-  padding: 1rem;
+  position:absolute;
+
+  padding-left: 38rem;
   justify-content: right;
+  padding-top: 0.5rem;
   // background-color: black;
 }
 
@@ -110,7 +124,7 @@
   position: absolute;
   border-radius: 0.5rem;
   left: 4rem;
-  top: 26.8rem;
+  top: 26rem;
 }
 
 .box-project-2 {
