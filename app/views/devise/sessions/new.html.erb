@@ -25,13 +25,12 @@
       <br/>
       <li class="d-flex "><%= f.submit  "Log in", class:" d-flex justify-content-center button-login"%></li>
       <br/>
-
       </ul>
-        <p class= "d-flex justify-content-center"> OR </p>
-      <br/>
-        <%= link_to "Sign up", new_registration_path(resource_name), class:"d-flex justify-content-center sign-link " %>
-      <br/>
 
+      <p class= "d-flex justify-content-center"> OR </p>
+      <br/>
+      <%= link_to "Sign up", new_registration_path(resource_name), class:"d-flex justify-content-center sign-link " %>
+      <br/>
       <%= link_to "Forgot your password?", new_password_path(resource_name), class:"d-flex justify-content-center"%><br/>
    <% end %>
    </div>

@@ -6,7 +6,9 @@
 
     <div class= "" >
       <div class="m-3">
-        <h2 class="text-2 text-center pt-3"><%= Date.today.strftime("%d-%m-%Y") %></h2>
+        <div class="new-box-3">
+          <h2 class="text-2  box-project-3"><%= Date.today.strftime("%d-%m-%Y") %></h2>
+        </div>
         <br/>
 
         <% if user.schedule == nil %>
@@ -25,7 +27,7 @@
           <% mid_time4 = start_time + (mid_time3 - start_time) / 2 %>
           <% mid_time5 = mid_time3 + (end_time - mid_time3) / 2 %>
 
-          <ul>
+          <ul class="text-position-3">
             <li data-start-target="startTime" class="text-2" >Start Time: <%= start_time.strftime("%H:%M") %></li>
             <br/>
             <% if (start_time.strftime("%H:%M") < lunch_break.strftime('%H:%M')) && (lunch_break.strftime('%H:%M') > end_time.strftime("%H:%M")) %>
