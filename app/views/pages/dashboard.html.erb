@@ -28,10 +28,10 @@
           </div>
           <div>
             <p class="text-5 pb-2 text-position-1"><%= @active_project.name %></p>
-            <p class="text-4 pt-5 text-position-1"><%= @active_project_percentage %>% completed</p>
+            <p class="text-4 pt-5 text-position-1"><%= @active_project_percentage%>% completed</p>
             <div class="bar-size-position">
               <div class="progress" >
-                <div class="progress-bar" role="progressbar" style="width: <%= @prioritised_project_percentage %>%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress-bar" role="progressbar" style="width: <%= @active_project_percentage %>%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
             </div>
           </div>
