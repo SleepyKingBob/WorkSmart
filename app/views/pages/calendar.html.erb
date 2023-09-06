@@ -1,6 +1,8 @@
-<div class="scrollable-table">
+
+<div class="scrollable-table ">
+
   <% if @projects.any? %>
-    <div class="container mt-5 text-center">
+    <div class="container mt-5 text-center ">
       <%= month_calendar(event: @projects) do |date| %>
         <div class="day">
           <%= date.day  %>
@@ -17,7 +19,10 @@
       <% end %>
     </div>
   <% else %>
-    <p>No projects found for this period.</p>
-    <%= link_to "Calendar", calendar_path  %>
+    <div class="calendar-page2">
+      <p>No projects found for this period.</p>
+      <%= link_to " Back to Calendar", calendar_path  %>
+    </div>
   <% end %>
+
 </div>

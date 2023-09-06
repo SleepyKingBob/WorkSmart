@@ -1,0 +1,28 @@
+.form-box-2{
+  padding-top: 20rem;
+  display: flex;
+  justify-content: center;
+  margin-top: 15rem;
+  align-items: center;
+  position: fixed;
+  width: 100vw;
+  height: 30vh;
+  margin-top: 24px;
+  margin-bottom: 100px;
+}
+
+
+.create-schedule-card {
+  background-color: #ffffff;
+  height:21rem;
+  width: 23rem;
+  border-radius: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  padding: 2rem;
+
+}
+
+
+.create-field {
+  text-align: center;
+}
