@@ -46,12 +46,12 @@
       <h2 class="text-2 box-project-2 pt-4">View Projects</h2>
     </div>
     <div>
-      <% if @user.projects == nil %>
+      <% if @unfinished_projects == nil %>
         <p class="text-4">You don't have any projects yet</p>
       <% else %>
       <ul>
       <div class="pt-3">
-        <% @user.projects.first(4).each do |project| %>
+        <% @unfinished_projects.first(4).each do |project| %>
           <li class="text-4 text-position-2"> <%= project.name %></li>
         <% end %>
       <div>
