@@ -46,10 +46,11 @@
               <br/>
             <% end %>
             <li class="text-2 pb-3">End Time: <%= end_time.strftime("%H:%M")  %></li>
-          </ul>
 
+          </ul>
+          <li> <%= link_to "Create schedule", new_schedule_path, class:"create" %> </li>
         <% end %>
-        <%= link_to "Create schedule", new_schedule_path, class:"d-flex justify-content-center fixed-bottom pb-2" %>
+
 
       </div>
     </div>
