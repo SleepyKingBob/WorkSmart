@@ -66,3 +66,4 @@ class SchedulesController < ApplicationController
     NotificationJob.set(wait_until: (Time.now + 10.seconds)).perform_later(current_user)
   end
 end
+

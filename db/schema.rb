@@ -67,8 +67,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_07_102754) do
     t.datetime "updated_at", null: false
     t.string "first_name"
     t.string "last_name"
-    t.string "projects_for_week"
     t.integer "work_hours"
+    t.string "projects_for_week"
     t.integer "break_time"
     t.string "provider"
     t.string "uid"
