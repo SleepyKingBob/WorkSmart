@@ -7,9 +7,9 @@ class PagesController < ApplicationController
 
   def calendar
     start_date = params.fetch(:start_date, Date.today).to_date
-    @projects = Project.where(start_date: start_date.beginning_of_month.beginning_of_week..start_date.end_of_month.end_of_week)
+    @all_projects = Project.where(start_date: start_date.beginning_of_month.beginning_of_week..start_date.end_of_month.end_of_week)
+    @projects = @all_projects.where(user_id: current_user.id)
   end
-
 
   def dashboard
     @unfinished_projects = @user.projects.where(completed: false)

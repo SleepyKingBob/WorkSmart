@@ -11,7 +11,11 @@
           <% if (project.start_date..project.dead_line).cover?(date)%>
             <div class="card-header">
               <div class="card-title">
-                <li><%=  link_to project.name, project  %></li>
+                <% if project.completed == true %>
+                  <li><%=  link_to project.name, project, class:"complete-text" %></li>
+                <% else %>
+                  <li><%=  link_to project.name, project  %></li>
+                <% end %>
               </div>
             </div>
           <% end %>
