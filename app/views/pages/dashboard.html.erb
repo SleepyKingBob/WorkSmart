@@ -2,9 +2,9 @@
 
     <% if @user.projects == [] || @prioritised_projects == []%>
       <div class="priority-card">
-        <p class= "text-1 text-center pt-5 " >You don't have any projects yet</p>
+        <p class= "text-2 text-center pt-5 " >You don't have any projects yet</p>
         <%= link_to new_project_path do %>
-        <p class=" text-2 text-center pt-5"><b>Add Project</b></p>
+        <p class=" text-2 position3 w-25  button-5"><b>Add Project</b></p>
        <% end %>
 
     <% elsif @active_project == nil %>
@@ -50,7 +50,7 @@
     </div>
     <div>
       <% if @unfinished_projects == nil %>
-        <p class="text-4">You don't have any projects yet</p>
+        <p class="text-2 text-center pt-5">You don't have any projects yet</p>
       <% else %>
       <ul>
       <div class="pt-3">
