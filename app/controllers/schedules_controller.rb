@@ -13,7 +13,10 @@ class SchedulesController < ApplicationController
   end
 
   def create
-    current_user.schedule.destroy unless current_user.schedule.nil?
+    unless current_user.schedule.nil?
+      @old_schedule = current_user.schedule
+      @old_schedule.destroy
+    end
     @schedule = Schedule.new(schedule_params)
     @schedule.user = current_user
     if @schedule.save
