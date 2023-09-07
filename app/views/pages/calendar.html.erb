@@ -12,9 +12,9 @@
             <div class="card-header">
               <div class="card-title">
                 <% if project.completed == true %>
-                  <li><%=  link_to project.name, project, class:"complete-text" %></li>
+                  <li><%=  link_to project.name, project%></li>
                 <% else %>
-                  <li><%=  link_to project.name, project  %></li>
+                  <li><%=  link_to project.name, project, class:"incomplete-text" %></li>
                 <% end %>
               </div>
             </div>
