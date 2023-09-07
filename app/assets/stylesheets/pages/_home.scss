@@ -157,19 +157,24 @@
   font-weight: 500;
   font-size: 16px;
   letter-spacing: 1px;
-  display: inline-block;
-  margin-top: 10px;
-  color: rgb(76, 175, 79);
-  padding: 8px 28px;
-  border-radius: 25px;
-  border-width: 2px;
-  border-color: rgb(76, 175, 79);
+  border-radius: 50px;
+  background: white;
+  border: 2px solid #4CAF4F;
   text-decoration: none;
-  transition: 0.5s;
+  text-align: center;
+  font-size: 16px;
+  padding: 8px;
+  width: 200px;
+  transition: all 0.4s;
+  cursor: pointer;
+  margin-right: 5px;
+  color: #4D4D4D;
+  margin-bottom: 3px;
   margin-left: 161px;
+  margin-top: 1rem;
 }
 
 .register-button:hover {
-  background: #00800066;
+  color:#4CAF4F;
   border: 2px solid #4CAF4F;
 }

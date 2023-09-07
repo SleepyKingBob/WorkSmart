@@ -62,18 +62,25 @@
 }
 
 .button-3 {
+  font-family: Montserrat, sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
   border-radius: 50px;
-   //background: linear-gradient(to right, #67b26b, #4ca2cb) !important;
+  background: white;
   border: 2px solid #4CAF4F;
   text-decoration: none;
-  color: #4CAF4F;
   text-align: center;
-  font-size: 18px;
-  padding: 10px;
-  width: 180px;
+  font-size: 16px;
+  padding: 8px;
+  width: 200px;
   transition: all 0.4s;
   cursor: pointer;
-  margin: 5px;
+  margin-right: 5px;
+  color: #4D4D4D;
+  margin-bottom: 3px;
+
 
 }
 
@@ -95,6 +102,7 @@
 
 .button-3:hover span {
   padding-right: 25px;
+  color: #4CAF4F;
 }
 
 .button-3:hover span:after {
