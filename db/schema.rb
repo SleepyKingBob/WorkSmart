@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_09_05_142252) do
+ActiveRecord::Schema[7.0].define(version: 2023_09_07_102754) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -39,7 +39,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_05_142252) do
   end
 
   create_table "schedules", force: :cascade do |t|
-    t.time "start_time"
+    t.time "start_time", default: "2000-01-01 06:00:00"
     t.time "end_time"
     t.time "lunch_break"
     t.bigint "user_id", null: false
@@ -67,8 +67,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_05_142252) do
     t.datetime "updated_at", null: false
     t.string "first_name"
     t.string "last_name"
-    t.integer "work_hours"
     t.string "projects_for_week"
+    t.integer "work_hours"
     t.integer "break_time"
     t.string "provider"
     t.string "uid"
