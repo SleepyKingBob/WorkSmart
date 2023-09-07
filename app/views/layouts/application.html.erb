@@ -47,8 +47,16 @@
         <%= render "shared/sidebar" %>
       </div>
       <%= yield %>
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
+  <div class="container justify-content-end">
+
+    <% if notice %>
+  <div class="alert flash-success alert-dismissible fade show m-1 flash " role="alert">
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    <%= notice %>
+  </div>
+<% end %>
+
+ </div>
       <%= render "shared/footer" %>
     </div>
   </body>

@@ -56,17 +56,17 @@ class ProjectsController < ApplicationController
     hours = (((@project.end_count - @project.start_count) / 60) / 60)
     @project.hours_worked = @project.hours_worked + hours
     @project.save
-    redirect_to dashboard_path
+    redirect_to dashboard_path, notice: " Project is active."
   end
 
   def complete
     @project.update_attribute(:completed, true)
-    redirect_to completed_projects_path
+    redirect_to completed_projects_path, notice: " Project successfully updated."
   end
 
   def incomplete
     @project.update_attribute(:completed, false)
-    redirect_to projects_path
+    redirect_to projects_path, notice: " Project is incomplete."
   end
 
 
