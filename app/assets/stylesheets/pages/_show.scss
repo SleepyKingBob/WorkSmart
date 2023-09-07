@@ -1,9 +1,13 @@
 .show-form {
   background-color: white;
-  margin-top: 10rem;
+  margin-top: 7.5rem;
   text-align: center;
   border-radius: 3px;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  max-height: 300rem;
+  margin-bottom: 5.5rem;
+
+
 }
 
 .des-proj {
@@ -18,10 +22,32 @@
 }
 
 
-.show-card-1 {
-  border-radius: 5px;
-  // border: 1px solid black;
-  padding: 32px;
+.card-25 {
+  display: inline-block;
+  align-items: start;
+}
+
+.card-26 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-27 {
+
+  width: 31rem;
+}
+
+.text-11 {
+  margin-left: 4rem;
+  width: 20rem;
+}
+
+
+.show-card-2 {
+  text-align: center;
+  padding-right: 23rem;
+  padding-top: 5rem;
+  min-width: 30rem;
 }
 
 .task-proj {
@@ -30,7 +56,7 @@
   font-weight: 500;
   font-size: 16px;
   letter-spacing: 1px;
-  display: inline-block;
+
   font-size: 20px;
   color: #286848;
   width: 300px;
