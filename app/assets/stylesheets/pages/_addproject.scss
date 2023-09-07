@@ -6,11 +6,68 @@
 }
 
 .border-project{
-  border: 1px dotted;
+
   border-color: rgb(91, 22, 22);
   width: 50rem;
   margin-top: -.5rem;
   margin-bottom: 1rem;
   display: inline-block;
+  border: 2px dotted #108716;
+  border-radius: 50px;
+
+}
+
+
+.button-5 {
+  // border-radius: 2.784px;
+  // padding: 10px 20px;
+  // color: #000000;
+  // background-color: #4CAF4F;
+  // text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 28px;
+
+  transition: 0.5s;
+
+  color: #4CAF4F;
+}
+
+.button-5:hover {
+  border-radius: 25px;
+  color: white;
+  background-color: #00bc06;
+  transform: scale(1.05);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.button-6 {
+  // border-radius: 2.784px;
+  // padding: 10px 20px;
+  // color: #000000;
+  // background-color: #af4c4c;
+  // text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 28px;
+  transition: 0.5s;
+  margin-top: 10px;
+  color: #4CAF4F;
+}
+
+.button-6:hover {
+  border-radius: 25px;
+  color: white;
+  background-color: #00800066;
+  transform: scale(1.05);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 
 }
