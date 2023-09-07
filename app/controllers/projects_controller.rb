@@ -47,7 +47,7 @@ class ProjectsController < ApplicationController
     end
     @project.update_attribute(:active, true)
     @project.update_attribute(:start_count, DateTime.now)
-    redirect_to dashboard_path
+    redirect_to dashboard_path, notice: " Project is active."
   end
 
   def unmark_active
@@ -56,7 +56,7 @@ class ProjectsController < ApplicationController
     hours = (((@project.end_count - @project.start_count) / 60) / 60)
     @project.hours_worked = @project.hours_worked + hours
     @project.save
-    redirect_to dashboard_path, notice: " Project is active."
+    redirect_to dashboard_path, notice: " Project is unactive."
   end
 
   def complete
