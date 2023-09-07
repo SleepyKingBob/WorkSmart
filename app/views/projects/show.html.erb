@@ -6,54 +6,62 @@
     <div class="my-3 des-proj show-card-1">
       <h1 class= "text-2 text-center"><%= @project.name %></h1>
       <div class= "li-des">
-      <p class="text-start"> <i class="fa-solid fa-calendar-days"></i><b> Date Started: </b><i><%= @project.start_date.strftime("%d %B %y") %></i></p>
-      <p class="text-start"> <i class="fa-solid fa-hourglass-end"></i><b> Project deadline: </b><i><%= @project.dead_line.strftime("%d %B %y") %></i></p>
-      <p class="text-start"> <i class="fa-solid fa-clock"></i><b> Hours expected to complete this project: </b><i><%= @project.expected_hours %> hours</i></p>
-      <p class="text-start"> <i class="fa-solid fa-comments-dollar"></i><b> Hours spent on project: </b><i><%= (@project.hours_worked.round(1) * 60) %> hours</i></p>
+      <p class="text-start"> <i class="fa-solid fa-calendar-days"></i><b> Date Started: </b></p>
+      <p class="d-flex text-align-start"><i><%= @project.start_date.strftime("%d %B %y") %></i></p>
+      <p class="text-start"> <i class="fa-solid fa-hourglass-end"></i><b> Project deadline: </b></p>
+      <p class="d-flex text-align-start"><i><%= @project.dead_line.strftime("%d %B %y") %></i></p>
+      <p class="text-start"> <i class="fa-solid fa-clock"></i><b> Hours expected to complete this project: </b></p>
+      <p class="d-flex text-align-start"><i><%= @project.expected_hours %> hours</i></p>
+      <p class="text-start"> <i class="fa-solid fa-comments-dollar"></i><b> Hours spent on project: </b></p>
+      <p class="d-flex text-align-start"><i><%= @project.hours_worked.round(1) %> hours</i></p>
       <p class="text-start"> <i class="fa-solid fa-square-check "></i><%= @percentage %>% completed</p>
       </div>
     </div>
 
-    <div class="my-4 task-proj show-card-1">
-      <h1 class= "text-2">Tasks</h1>
-      <ul>
+    <div class="my-4 task-proj show-card-2 ">
+      <h1 class= "text-2 text-11">Tasks</h1>
+      <ul class="card-25">
       <% @tasks.each do |task| %>
         <% if task.completed %>
-          <li class="my-3">
-          <div class="d-flex justify-content-between">
-            <div>
-              <%= link_to checkbox_path(task) do %>
-                <i class="fa-solid fa-square-check" style="color: #33ba21;"></i>
-              <% end %>
-              <%= task.name %>
+          <li class="my-3 card-27">
+            <div class="card-26">
+              <div class="">
+                <%= link_to checkbox_path(task) do %>
+                  <i class="fa-solid fa-square-check " style="color: #33ba21;"></i>
+                <% end %>
+              </div>
+              <div class="mt-4 ">
+                <%= task.name %>
+              </div>
+              <div class="">
+                <%= link_to project_task_path(@project.id, task.id),
+                            data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do
+                %>
+                  <i class="fa-solid fa-trash " style="color: #0dc200;"></i>
+                <% end %>
+              </div>
             </div>
-            <div>
-              <%= link_to project_task_path(@project.id, task.id),
-                          data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do
-              %>
-                <i class="fa-solid fa-trash" style="color: #0dc200;"></i>
-              <% end %>
-            </div>
-          </div>
           </li>
         <% else %>
-          <li class="my-3">
-          <div class="d-flex justify-content-between">
-            <div>
-              <%= link_to checkbox_path(task) do %>
-                <i class="fa-regular fa-square" style="color: #1ae000;"></i>
-              <% end %>
-              <%= task.name %>
+
+          <li class="my-3 card-27 ">
+            <div class="card-26">
+              <div>
+                <%= link_to checkbox_path(task) do %>
+                  <i class="fa-regular fa-square" style="color: #1ae000;"></i>
+                <% end %>
+                <%= task.name %>
+              </div>
+              <div>
+                <%= link_to project_task_path(@project.id, task.id),
+                            data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do
+                %>
+                  <i class="fa-solid fa-trash" style="color: #0dc200;"></i>
+                <% end %>
+              </div>
             </div>
-            <div>
-              <%= link_to project_task_path(@project.id, task.id),
-                          data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do
-              %>
-                <i class="fa-solid fa-trash" style="color: #0dc200;"></i>
-              <% end %>
-            </div>
-          </div>
           </li>
+
         <% end %>
       <% end %>
       </ul>
