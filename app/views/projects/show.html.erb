@@ -1,15 +1,16 @@
 
+
 <div class="container show-form p-3 pb-5 show-card">
   <div class="d-flex justify-content-around">
 
     <div class="my-3 des-proj show-card-1">
       <h1 class= "text-2 text-center"><%= @project.name %></h1>
       <div class= "li-des">
-      <p class="text-start"> <i class="fa-solid fa-calendar-days"></i> Date Started: <%= @project.start_date.strftime("%d %B %y") %></p>
-      <p class="text-start"> <i class="fa-solid fa-hourglass-end"></i> Project deadline: <%= @project.dead_line.strftime("%d %B %y") %></p>
-      <p class="text-start"> <i class="fa-solid fa-clock"></i> Hours expected to complete this project: <%= @project.expected_hours %></p>
-      <p class="text-start"> <i class="fa-solid fa-comments-dollar"></i> Hours spent on project: <%= @project.hours_worked.round(1) %>/<%= @project.expected_hours %></p>
-      <p class="text-start"> <i class="fa-solid fa-square-check"></i><%= @percentage %>% completed</p>
+      <p class="text-start"> <i class="fa-solid fa-calendar-days"></i><b> Date Started: </b><i><%= @project.start_date.strftime("%d %B %y") %></i></p>
+      <p class="text-start"> <i class="fa-solid fa-hourglass-end"></i><b> Project deadline: </b><i><%= @project.dead_line.strftime("%d %B %y") %></i></p>
+      <p class="text-start"> <i class="fa-solid fa-clock"></i><b> Hours expected to complete this project: </b><i><%= @project.expected_hours %> hours</i></p>
+      <p class="text-start"> <i class="fa-solid fa-comments-dollar"></i><b> Hours spent on project: </b><i><%= (@project.hours_worked.round(1) * 60) %> hours</i></p>
+      <p class="text-start"> <i class="fa-solid fa-square-check "></i><%= @percentage %>% completed</p>
       </div>
     </div>
 

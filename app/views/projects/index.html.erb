@@ -1,23 +1,23 @@
-<div class="container show-form w-75 py-3 index ">
+<div class="container show-form w-75 py-3 ">
   <h1 class= "sign-text">Unfinished Projects</h1>
-
+<br/>
   <ul>
     <% @projects.each do |project| %>
-      <li class="d-flex w-100 justify-content-around ">
-        <p class="text-7 my-4 w-25"><%= project.name %></p>
-        <div class="p-2 align-self-center d-flex justify-content-around w-25">
-          <%= link_to "View",  project_path(project.id), class:"button-1"%>
-          <%= link_to "Delete",
-                      project_path(project.id),
-                      data: {turbo_method: :delete, turbo_confirm: "Are you sure?"},
-                      class:"my-auto button-2"
-          %>
-
-
-
-        </div>
-      </li>
+      <div class="border-project">
+        <li class="d-flex w-100 justify-content-around space1">
+          <p class="text-7 my-2 w-25"><%= project.name %> </p>
+          <div class="p-2 align-self-center d-flex justify-content-around w-50">
+            <%= link_to "View",  project_path(project.id), class:"button-1"%>
+            <%= link_to "Delete",
+                        project_path(project.id),
+                        data: {turbo_method: :delete, turbo_confirm: "Are you sure?"},
+                        class:"my-auto button-2"
+            %>
+          <div>
+        </li>
+      </div>
     <% end %>
   </ul>
+  <br/>
   <%= link_to "View Completed Projects", completed_projects_path, class:"button-1 my-auto" %>
 </div>
