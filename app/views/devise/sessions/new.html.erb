@@ -1,5 +1,5 @@
 
-<div class="wrapper-login ">
+<div class="wrapper-login">
     <div class="form-login">
         <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <h2 class="sign-text text-1  text-center">Please login</h2>
@@ -16,7 +16,7 @@
 
             <%= f.check_box :remember_me, as: :boolean if devise_mapping.rememberable? %>
             <%= f.label "Remember me" %>
-          <li class="d-flex"><%= f.submit  "Log in", class:" d-flex justify-content-center button-login"%></li>
+          <li class="d-flex"><%= f.submit "Log in" , class:" d-flex justify-content-center button-login"%> </li>
 
 
         <!--Forgot Password button-->
@@ -32,3 +32,4 @@
    <% end %>
    </div>
 </div>
+
