@@ -7,11 +7,11 @@
         <li class="d-flex w-100 justify-content-around space1">
           <p class="text-7 my-2 w-25"><%= project.name %> </p>
           <div class="p-2 align-self-center d-flex justify-content-around w-50">
-            <%= link_to "View",  project_path(project.id), class:"button-1"%>
+            <%= link_to "View",  project_path(project.id), class:"button-5"%>
             <%= link_to "Delete",
                         project_path(project.id),
                         data: {turbo_method: :delete, turbo_confirm: "Are you sure?"},
-                        class:"my-auto button-2"
+                        class:"my-auto button-6"
             %>
           <div>
         </li>
